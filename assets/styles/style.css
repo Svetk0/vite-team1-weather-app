@@ -8,7 +8,12 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-size: 4.1vw;
+  font-family: "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  color: aquamarine;
 }
 
 a, button {
@@ -28,21 +33,40 @@ a, button {
   font-style: normal;
   font-weight: 400;
   line-height: 2.75rem;
+  color: black;
+  font-size: 3rem;
 }
 
-/*
+.subtitle-h3 {
+  font-family: "Helvetica", sans-serif;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.75rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.subtitle-body {
+  font-family: "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  color: #aeafb8;
+  font-size: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
-    html {
-        font-size: 2.1vw;
-    }
+  html {
+    font-size: 2.1vw;
+  }
 }
-
 @media screen and (min-width: 1600px) {
-    html {
-        font-size: 0.83vw;
-    }
+  html {
+    font-size: 0.83vw;
+  }
 }
-*/
 /*                                     */
 /* ------- THE PROJECT BEGINNING  ---- */
 /*                                     *//*# sourceMappingURL=style.css.map */

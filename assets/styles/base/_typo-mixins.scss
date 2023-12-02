@@ -11,6 +11,15 @@ $fontColor: black;
     font-weight: 400;
     line-height: normal;
     margin: 0;
+    color: aquamarine;
+}
+@mixin typo-subtitle-body {
+    font-family: $font-body;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    color: $color-lightGrey;
 }
 
 @mixin typo-body-bold {
@@ -26,4 +35,5 @@ $fontColor: black;
     font-style: normal;
     font-weight: 400;
     line-height: 2.75rem;
+    color: $fontColor;
 }

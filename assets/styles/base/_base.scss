@@ -8,7 +8,8 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 4.1vw;
+    @include typo-body;
+    
 }
 
 a, button {
@@ -22,8 +23,18 @@ a, button {
 }
 .title {
     @include typo-h;
+    font-size: 3rem;
 }
-/*
+.subtitle-h3{
+    @include typo-h;
+    font-size: 1.5rem;
+}
+.subtitle-body{
+    @include typo-subtitle-body;
+    font-size: 1.5rem;
+}
+
+
 @media screen and (min-width: 768px) {
     html {
         font-size: 2.1vw;
@@ -35,4 +46,3 @@ a, button {
         font-size: 0.83vw;
     }
 }
-*/
