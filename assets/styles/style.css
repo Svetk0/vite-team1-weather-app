@@ -67,6 +67,42 @@ a, button {
     font-size: 0.83vw;
   }
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.block-1 {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+}
+
+.block-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+}
+
+.clothes-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clothes-advice {
+  display: flex;
+}
+
+.motivation {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*                                     */
 /* ------- THE PROJECT BEGINNING  ---- */
-/*                                     *//*# sourceMappingURL=style.css.map */
+/*                                     */
+
+/*# sourceMappingURL=style.css.map */
