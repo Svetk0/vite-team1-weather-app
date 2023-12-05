@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------- colors  ------*/
 /* ---- mixins -----*/
 /*----- typo mixins -----*/
@@ -79,7 +80,7 @@ a, button {
 
 .block-1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 600px;
 }
 
@@ -102,6 +103,254 @@ a, button {
 .motivation {
   display: flex;
   justify-content: space-between;
+}
+
+.container_weather__input {
+  display: flex;
+  justify-content: center;
+}
+
+/*инпут введения города*/
+#city {
+  color: #333;
+  background-color: #eee;
+  width: 30em;
+}
+
+/*контейнер с основной инфой: город, температура, мин и макс температура*/
+.container_weather__main-info {
+  display: grid;
+  grid-template-rows: 12fr;
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+}
+
+/*местоположение*/
+#location {
+  justify-self: center;
+}
+
+/*температура*/
+#temperature {
+  font-size: 42px;
+  justify-self: center;
+}
+
+/*иконка в соотвествии с описанием погоды, приходит от api*/
+#icon {
+  width: 10rem;
+  justify-self: center;
+  margin: 2rem;
+}
+
+/*описание погодных условий*/
+#description {
+  font-size: 38px;
+  justify-self: center;
+}
+
+/*описание погодных условий первая буква*/
+#description::first-letter {
+  text-transform: uppercase;
+}
+
+/*контейнер для макс и мин температур*/
+.container_weather__main-info_min-max {
+  display: flex;
+  gap: 40px;
+  font-size: 32px;
+}
+
+/*контейнер дополнительной информации*/
+.container_weather__add-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 2rem;
+}
+
+/*контейнер доп информации ощущается как*/
+.container_weather__add-info__feels_like {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-right: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 32px;
+  border-radius: 5px;
+}
+
+/*температура ощущается как*/
+#temperature_feels_like {
+  color: white;
+  align-self: flex-start;
+  font-size: 42px;
+}
+
+/* контейнер с компасом */
+.container_weather__add-info__compass {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+}
+
+/*компас название контейнера*/
+.container_weather__add-info__compass_title {
+  font-size: 32px;
+  color: white;
+}
+
+/* компоненты компаса */
+.container_weather__add-info__compass_content {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid white;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* стрелка компаса */
+.container_weather__add-info__compass_content_arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 60px;
+  background-color: white;
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+/*наконечник стрелки компаса*/
+.container_weather__add-info__compass_content_arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 16px solid white;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* контейнер с инфой скорость ветра */
+.container_weather__add-info__compass_content_arrow_wind-speed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/*дивайдеры-метки на компасе*/
+.divider {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: white;
+}
+
+/*компас метка север*/
+.divider-north {
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*компас метка юг*/
+.divider-south {
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*компас метки восток и запад*/
+.divider-east,
+.divider-west {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*компас метка восток*/
+.divider-east {
+  right: 10px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/*компас метка запад*/
+.divider-west {
+  left: 10px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/*спаны в которые обернуты буквы сторон света*/
+.divider span {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+/*буквы сторон восток и запад*/
+.divider__text-east,
+.divider__text-west {
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  transform: rotate(90deg) scaleY(-1);
+  position: relative;
+  top: 0.1em;
+}
+
+/*буква W запад*/
+.divider__text-west {
+  left: -1.5em;
+}
+
+/*буква E восток*/
+.divider__text-east {
+  right: -0.1em;
+}
+
+/*контейнер ошибок и контейнер советов*/
+#error-container,
+.container_weather__advice {
+  display: grid;
+  grid-template-rows: 12fr;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 5px;
+  font-size: 26px;
+}
+
+/*контейнер советов название*/
+.container_weather__advice_title {
+  color: #beb8b8;
+  display: flex;
+  justify-self: flex-start;
+  font-size: 24px;
+}
+
+/*контейнер советов контент*/
+.container_weather__advice_content {
+  font-style: italic;
+  font-size: 32px;
 }
 
 /*                                     */
