@@ -1,4 +1,7 @@
-/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
+/*------- colors  ------*/
+/* ---- mixins -----*/
+/*----- typo mixins -----*/
+/*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -103,6 +106,4 @@ a, button {
 
 /*                                     */
 /* ------- THE PROJECT BEGINNING  ---- */
-/*                                     */
-
-/*# sourceMappingURL=style.css.map */
+/*                                     *//*# sourceMappingURL=style.css.map */
