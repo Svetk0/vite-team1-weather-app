@@ -104,6 +104,10 @@ a, button {
   justify-content: space-between;
 }
 
+.container {
+  display: flex;
+}
+
 /*                                     */
 /* ------- THE PROJECT BEGINNING  ---- */
 /*                                    *//*# sourceMappingURL=style.css.map */
