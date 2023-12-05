@@ -11,7 +11,7 @@ $fontColor: black;
     font-weight: 400;
     line-height: normal;
     margin: 0;
-    color: aquamarine;
+    color: $fontColor;
 }
 @mixin typo-subtitle-body {
     font-family: $font-body;
