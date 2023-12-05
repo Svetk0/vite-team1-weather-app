@@ -292,40 +292,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
             } else {
                 switch (weatherDescription) {
                     case 'пасмурно':
-                        backgroundImage = 'assets/images/cloudy/weather/scattered_clouds_day.jpg';
+                        backgroundImage = 'assets/images/weather/cloudy/scattered_clouds_day.jpg';
                         break;
                     case 'переменная облачность':
-                        backgroundImage = 'assets/images/clear/weather/clouds_sunny.jpg';
+                        backgroundImage = 'assets/images/weather/clear/clouds_sunny.jpg';
                         break;
                     case 'небольшая облачность':
-                        backgroundImage = 'assets/images/clear/weather/few_clouds_day.jpg';
+                        backgroundImage = 'assets/images/weather/clear/few_clouds_day.jpg';
                         break;
                     case 'облачно с прояснениями':
-                        backgroundImage = 'assets/images/clear/weather/clouds_sunny.jpg';
+                        backgroundImage = 'assets/images/weather/clear/clouds_sunny.jpg';
                         break;
                     case 'небольшой дождь':
-                        backgroundImage = 'assets/images/rain/weather/heavy_rain_day.jfif';
+                        backgroundImage = 'assets/images/weather/rain/heavy_rain_day.jfif';
                         break;
                     case 'дождь':
-                        backgroundImage = 'assets/images/rain/weather/small_rain2.jfif';
+                        backgroundImage = 'assets/images/weather/rain/small_rain2.jfif';
                         break;
                     case 'ясно':
-                        backgroundImage = 'assets/images/clear/weather/few_clouds_day.jpg';
+                        backgroundImage = 'assets/images/weather/clear/few_clouds_day.jpg';
                         break;
                     case 'туман':
-                        backgroundImage = 'assets/images/mist/weather/misty_day.jfif';
+                        backgroundImage = 'assets/images/weather/mist/misty_day.jfif';
                         break;
                     case 'мгла':
-                        backgroundImage = 'assets/images/mist/weather/big_mist_forrest_day.jfif';
+                        backgroundImage = 'assets/images/weather/mist/big_mist_forrest_day.jfif';
                         break;
                     case 'снег':
-                        backgroundImage = 'assets/images/snow/weather/snow_forrest.jpg';
+                        backgroundImage = 'assets/images/weather/snow/snow_forrest.jpg';
                         break;
                     case 'небольшой снег':
-                        backgroundImage = 'assets/images/snow/weather/frozen.jfif';
+                        backgroundImage = 'assets/images/weather/snow/frozen.jfif';
                         break;
                     case 'метель':
-                        backgroundImage = 'assets/images/snow/weather/frozen.jfif';
+                        backgroundImage = 'assets/images/weather/snow/frozen.jfif';
                         break;
 
                     // Другие случаи для дневных условий
