@@ -84,10 +84,12 @@ a, button {
   width: 600px;
 }
 
-.block-2 {
+.block-2-3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.block-2 {
   width: 600px;
 }
 
