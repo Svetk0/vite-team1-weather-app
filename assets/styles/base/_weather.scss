@@ -100,9 +100,8 @@
 /* контейнер с компасом */
 .container_weather__add-info__compass {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 2rem;
-    /* Уменьшил размер отступа */
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
@@ -119,9 +118,7 @@
 .container_weather__add-info__compass_content {
     position: relative;
     width: 150px;
-    /* Уменьшил размер контейнера */
     height: 150px;
-    /* Уменьшил размер контейнера */
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid white;
@@ -136,9 +133,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 1px;
-    /* Уменьшил толщину стрелки */
     height: 60px;
-    /* Уменьшил высоту стрелки */
     background-color: white;
     transform-origin: bottom;
     transition: transform 0.5s;
@@ -165,7 +160,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    /* Уменьшил размер шрифта */
     font-weight: bold;
     color: white;
 }
