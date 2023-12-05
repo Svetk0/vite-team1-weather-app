@@ -9,7 +9,13 @@
     color: #333;
     background-color: #eee;
     width: 30em;
-    height: 7rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+}
+
+#city:focus {
+    border: none;
 }
 
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
