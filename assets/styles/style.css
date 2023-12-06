@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/*------- colors  ------*/
-/* ---- mixins -----*/
-/*----- typo mixins -----*/
-/*--------- base -------*/
+/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -107,6 +104,9 @@ a, button {
   justify-content: space-between;
 }
 
+/*                                     */
+/* ------- THE PROJECT BEGINNING  ---- */
+/*                                     */
 .container_weather__input {
   display: flex;
   justify-content: center;
@@ -361,8 +361,4 @@ a, button {
 .container_weather__advice_content {
   font-style: italic;
   font-size: 32px;
-}
-
-/*                                     */
-/* ------- THE PROJECT BEGINNING !  ---- */
-/*                                     *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
