@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Vite App: Not only weather</title>
+  
+    
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <link rel="stylesheet" href="assets/styles/base/style-swapper.css">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
@@ -68,12 +76,17 @@
 
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="assets/images/clothes/1.jpg"></div>
+                          <div class="swiper-slide"><img src="assets/images/clothes/2.jpg"></div>
+                          <div class="swiper-slide"><img src="assets/images/clothes/3.jpg"></div>
+                          <div class="swiper-slide"><img src="assets/images/clothes/4.jpg"></div>
+                          <div class="swiper-slide"><img src="assets/images/clothes/5.jpg"></div>
                         </div>
                         <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-
-
+                      </div>
+                </div>  
+                
+                
                 <div class="block-3">
                     <div class="motivation">
                         <div class="gif">
@@ -90,7 +103,11 @@
     </div>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script type="module" src="js-main.js"></script>
-    <script src="weather.js"></script>
+    <script type="module" src="weather.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script  src="swiper.js"></script>
+    
 </body>
 
 </html>
