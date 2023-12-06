@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const mainContainerInfo = document.querySelector('.container_weather__main-info');
     const addContainerInfo = document.querySelector('.container_weather__add-info')
     const errorContainer = document.getElementById('error-container');
+    const adviceContainer = document.getElementById('container_advice');
 
 
     // Функция получения направления ветра по градусам
@@ -39,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // Функция запроса данных о погоде
     async function fetchData(location) {
         try {
-            let apiUrl;
+            let API_URL;
 
             if (location) {
                 const { latitude, longitude } = location;
-                apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${apiKey}&units=metric`;
+                API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=ru&appid=${apiKey}&units=metric`;
             } else {
                 const city = cityInput.value.trim();
                 if (/^\d+$/.test(city)) {
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                     return;
                 } else {
-                    apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${apiKey}&units=metric`;
+                    API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=ru&appid=${apiKey}&units=metric`;
                     cityInput.value = '';
                 }
             }
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-            const response = await fetch(apiUrl);
+            const response = await fetch(API_URL);
             if (!response.ok) {
                 throw new Error('Ошибка получения данных о погоде');
             }
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
             console.log('Получены данные о погоде:', data);
 
-            updateChart(data);
+            displayWeatherData(data);
             return data;
         } catch (error) {
             console.error('Ошибка получения данных о погоде:', error.message);
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     // Функция вывода информации о городе, температуре, макс и мин температуре, иконка, ощущается как, короткое описание
-    function updateChart(newData) {
+    function displayWeatherData(newData) {
         if (newData) {
             console.log(JSON.stringify(newData, null, 2));
 
@@ -171,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
     // Функция для получения случайного совета
-    const adviceContainer = document.getElementById('container_advice');
+
     async function fetchAdvice() {
         try {
             const apiUrl = 'https://api.adviceslip.com/advice';
