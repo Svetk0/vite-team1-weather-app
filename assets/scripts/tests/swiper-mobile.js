@@ -50,9 +50,9 @@ function changePack(pathSeason) {
     packLight.src = pathSeason + clothesImages[1];
     console.log(packLight);
     packMedium.src = pathSeason + clothesImages[0];
-    console.log(packLight);
+    console.log(packMedium);
     packWarm.src = pathSeason + clothesImages[2];
-    console.log(packLight);
+    console.log(packWarm);
 }
 function determineSeason(currentTemperature) {
 
