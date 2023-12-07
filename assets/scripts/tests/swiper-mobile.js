@@ -1,20 +1,20 @@
 // Бесконечный куб
-let swiper = new Swiper(".mySwiper", {
+// let swiper = new Swiper(".mySwiper", {
     
-    effect: "cube",
-    grabCursor: true,
-    cubeEffect: {
-      shadow: true,
-      slideShadows: true,
-      shadowOffset: 20,
-      shadowScale: 0.94,
-    },
-    loop: true,
+//     effect: "cube",
+//     grabCursor: true,
+//     cubeEffect: {
+//       shadow: true,
+//       slideShadows: true,
+//       shadowOffset: 20,
+//       shadowScale: 0.94,
+//     },
+//     loop: true,
     
-    pagination: {
-      el: ".swiper-pagination",
-    },
-});
+//     pagination: {
+//       el: ".swiper-pagination",
+//     },
+// });
   
 
 // Вертикальная бесконечная прокрутка
@@ -29,3 +29,11 @@ let swiper = new Swiper(".mySwiper", {
 //       clickable: true,
 //     },
 //   });   
+
+//Карточки
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+});
+  
