@@ -1,17 +1,24 @@
+$block-radius: 20px;
+$block-weather-width: 95%;
+$block-background-color: rgba(255, 255, 255, 0.581);
+$block-background-color-main: rgba(33, 31, 31, 0.4);
+
 .container_weather__input {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 /*инпут введения города*/
 #city {
     margin-top: 2rem;
     color: #333;
-    background-color: #eee;
-    width: 30em;
-    height: 3rem;
-    border-radius: 5px;
+    background-color: #eeeeeec1;
+    width: $block-weather-width;
+    height: 2.5rem;
+    border-radius: 10px;
     border: none;
+    padding-left: 20px;
 }
 
 #city:focus {
@@ -23,11 +30,12 @@
     display: grid;
     grid-template-rows: 12fr;
     justify-content: center;
-    padding: 2rem;
-    margin: 2rem;
-    background-color: rgba(255, 255, 255, 0.4);
-    color: $color-blue;
-    border-radius: 5px;
+    padding: clamp(0.7rem, 0.5rem + 2.5vw, 2rem);
+    margin-top: 2rem;
+    background-color:$block-background-color-main;
+    color: #fff;
+    border-radius: $block-radius;
+    width: $block-weather-width;
 }
 
 
@@ -35,25 +43,28 @@
 /*местоположение*/
 #location {
     justify-self: center;
+    font-size: clamp(1.7rem, 0.5rem + 2.5vw, 2rem);
 }
 
 /*температура*/
 #temperature {
-    font-size: 42px;
+    font-size: clamp(1.7rem, 0.5rem + 2.5vw, 2rem);
     justify-self: center;
 }
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-    width: 10rem;
+    width: clamp(5rem, 3rem + 10vw, 10rem);
     justify-self: center;
-    margin: 2rem;
+    margin: 1rem 0 1rem 0;
 }
 
 /*описание погодных условий*/
 #description {
-    font-size: 38px;
-    justify-self: center;
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 1.2rem);
+    margin-bottom: 1.5rem;
+  
+    text-align: center;
 }
 
 /*описание погодных условий первая буква*/
@@ -64,63 +75,77 @@
 /*контейнер для макс и мин температур*/
 .container_weather__main-info_min-max {
     display: flex;
-    gap: 40px;
-    font-size: 32px;
+    gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
+    text-align: center;
 }
 
 /*контейнер дополнительной информации*/
 .container_weather__add-info {
     display: grid;
     grid-template-columns: 50% 50%;
-    margin: 2rem;
+    margin-top: 2rem;
+    width: $block-weather-width;
+    
 }
 
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    margin-right: 2rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    margin-right: clamp(0.25rem, 0.25rem + 2.5vw, 0.5rem);
+    background-color: rgba(33, 31, 31, 0.4);
     color: white;
-    font-size: 32px;
-    border-radius: 5px;
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+    border-radius: $block-radius;
 }
 
 /*температура ощущается как*/
 #temperature_feels_like {
     color: white;
-    align-self: flex-start;
-    font-size: 42px;
+    align-self: center;
+    
+    font-size: clamp(3rem, 0.5rem + 2.5vw, 4rem);
+    margin-top: 2rem;
+
 }
 
 /* контейнер с компасом */
 .container_weather__add-info__compass {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem;
+    background-color: $block-background-color-main;
     color: white;
-    border-radius: 5px;
+    border-radius: $block-radius;
+    margin-left: clamp(0.25rem, 0.25rem + 2.5vw, 0.5rem);
 }
 
 /*компас название контейнера*/
-.container_weather__add-info__compass_title {
-    font-size: 32px;
+.container__add-info__feels_like_title,.container_weather__add-info__compass_title {
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
     color: white;
+    
+    align-self: flex-start;
+    margin: 0.5rem ;
 }
 
 /* компоненты компаса */
 .container_weather__add-info__compass_content {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: clamp(100px, 10rem + 10vw, 150px);
+    height: clamp(100px, 10rem + 10vw, 150px);
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid white;
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem;
+    
+    
 }
 
 /* стрелка компаса */
@@ -156,8 +181,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
-    font-weight: bold;
+    font-size: clamp(1rem, 0.5rem + 2.5vw, 1.4rem);
+    font-weight: 400;
+    text-align: center;
     color: white;
 }
 
