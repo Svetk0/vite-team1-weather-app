@@ -71,6 +71,7 @@ a, button {
 .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   flex: 1 1 98vw;
   margin: 0 auto;
   justify-content: space-between;
@@ -80,9 +81,10 @@ a, button {
 .block-weather {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  flex: 40%;
   justify-content: flex-start;
   align-items: center;
+  padding: 5px;
 }
 
 .block-2-3 {
@@ -152,7 +154,7 @@ a, button {
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 20px;
-  width: 95%;
+  width: 100%;
 }
 
 /*местоположение*/
@@ -196,10 +198,12 @@ a, button {
 
 /*контейнер дополнительной информации*/
 .container_weather__add-info {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex: 100%;
   margin-top: 2rem;
-  width: 95%;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 /*контейнер доп информации ощущается как*/
@@ -207,7 +211,6 @@ a, button {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-  margin-right: clamp(0.25rem, 0.25rem + 2.5vw, 0.5rem);
   background-color: rgba(33, 31, 31, 0.4);
   color: white;
   border-radius: 20px;
@@ -231,7 +234,6 @@ a, button {
   background-color: rgba(33, 31, 31, 0.4);
   color: white;
   border-radius: 20px;
-  margin-left: clamp(0.25rem, 0.25rem + 2.5vw, 0.5rem);
 }
 
 /*компас название контейнера*/
@@ -288,7 +290,7 @@ a, button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 1.4rem);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   font-weight: 400;
   text-align: center;
   color: white;

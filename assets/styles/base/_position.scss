@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   flex: 1 1 98vw;
   margin: 0 auto;
   justify-content: space-between;
@@ -11,9 +12,10 @@
 .block-weather {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  flex: 40%;
   justify-content: flex-start;
   align-items: center;
+  padding: 5px;
 
 }
 
