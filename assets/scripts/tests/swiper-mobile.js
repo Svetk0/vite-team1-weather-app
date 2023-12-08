@@ -1,3 +1,6 @@
+//import * as fetchDataModule from '../weather/fetchDataModule.js';
+
+
 // Бесконечный куб
 // let swiper = new Swiper(".mySwiper", {
 
