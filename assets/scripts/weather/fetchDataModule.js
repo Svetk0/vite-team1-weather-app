@@ -32,7 +32,7 @@ export async function fetchData(location) {
             ErrorsModule.showError(`Ошибка: ${data.message}`);
             return;
         }
-        console.log(data); g
+        console.log(data);
         console.log('Получены данные о погоде:', data.main.temp);
 
         return data;
