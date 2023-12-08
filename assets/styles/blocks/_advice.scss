@@ -1,0 +1,26 @@
+/* контейнер советов*/
+
+.container_weather__advice {
+    display: grid;
+    grid-template-rows: 12fr;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    font-size: 26px;
+}
+
+/*контейнер советов название*/
+.container_weather__advice_title {
+    color: #beb8b8;
+    display: flex;
+    justify-self: flex-start;
+    font-size: 24px;
+}
+
+/*контейнер советов контент*/
+.container_weather__advice_content {
+    font-style: italic;
+    font-size: 32px;
+}

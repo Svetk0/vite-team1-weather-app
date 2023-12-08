@@ -361,8 +361,19 @@ a, button {
   right: -0.1em;
 }
 
-/*контейнер ошибок и контейнер советов*/
-#error-container,
+/*контейнер ошибок */
+#error-container {
+  display: grid;
+  grid-template-rows: 12fr;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: rgba(143, 92, 92, 0.438);
+  color: rgb(238, 230, 219);
+  border-radius: 20px;
+  font-size: clamp(0.8rem, 0.5rem + 2.5vw, 1.2rem);
+}
+
+/* контейнер советов*/
 .container_weather__advice {
   display: grid;
   grid-template-rows: 12fr;
