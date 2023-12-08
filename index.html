@@ -1,167 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/styles/base/style-swapper.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
 
     <title>Vite App: Not only weather</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="app">
-      <!--    <h1 class="title">not only weather app</h1>-->
-      <!--    <button class="btn-title">hide title</button>-->
-      <div class="container">
-        <div class="block-weather">
-          <div class="container_weather__input">
-            <input
-              type="text"
-              id="city"
-              placeholder="Введите название города"
-            />
-          </div>
-          <div class="container_weather__main-info">
-            <h1 class="container__main-info__location" id="location"></h1>
-            <div
-              class="container__main-info__temperature"
-              id="temperature"
-            ></div>
-            <img class="container__main-info__img" src="''" id="icon" alt="bg-ph"/>
-            <div
-              class="container__main-info__description"
-              id="description"
-            ></div>
-            <div class="container_weather__main-info_min-max">
-              <div
-                class="container__main-info_min-max__min"
-                id="temperature_min"
-              ></div>
-              <div
-                class="container__main-info_min-max__max"
-                id="temperature_max"
-              ></div>
-            </div>
-          </div>
-          <div class="container_weather__add-info">
-            <div class="container_weather__add-info__feels_like">
-              <div class="container__add-info__feels_like_title">
-                Ощущается как
-              </div>
-              <div
-                class="container__add-info__feels_like_temperature"
-                id="temperature_feels_like"
-              ></div>
-            </div>
-            <div class="container_weather__add-info__compass">
-              <div class="container_weather__add-info__compass_title">
-                Ветер
-              </div>
-              <div class="container_weather__add-info__compass_content">
-                <div
-                  class="container_weather__add-info__compass_content_arrow"
-                  id="arrow"
-                ></div>
-                <div
-                  class="container_weather__add-info__compass_content_arrow_wind-speed"
-                  id="wind-speed"
-                ></div>
-                <div class="divider divider-north">
-                  <span class="divider__text divider__text-north">N</span>
+        <!--    <h1 class="title">not only weather app</h1>-->
+        <!--    <button class="btn-title">hide title</button>-->
+        <div class="container">
+            <div class="block-weather">
+                <div class="container_weather__input">
+                    <input type="text" id="city" placeholder="Введите название города" />
                 </div>
-                <div class="divider divider-south">
-                  <span class="divider__text divider__text-south">S</span>
+                <div class="container_weather__main-info">
+                    <h1 class="container__main-info__location" id="location"></h1>
+                    <div class="container__main-info__temperature" id="temperature"></div>
+                    <img class="container__main-info__img" src="''" id="icon" alt="bg-ph" />
+                    <div class="container__main-info__description" id="description"></div>
+                    <div class="container_weather__main-info_min-max">
+                        <div class="container__main-info_min-max__min" id="temperature_min"></div>
+                        <div class="container__main-info_min-max__max" id="temperature_max"></div>
+                    </div>
                 </div>
-                <div class="divider divider-east">
-                  <span class="divider__text divider__text-east">E</span>
+                <div class="container_weather__add-info">
+                    <div class="container_weather__add-info__feels_like">
+                        <div class="container__add-info__feels_like_title">
+                            Ощущается как
+                        </div>
+                        <div class="container__add-info__feels_like_temperature" id="temperature_feels_like"></div>
+                    </div>
+                    <div class="container_weather__add-info__compass">
+                        <div class="container_weather__add-info__compass_title">
+                            Ветер
+                        </div>
+                        <div class="container_weather__add-info__compass_content">
+                            <div class="container_weather__add-info__compass_content_arrow" id="arrow"></div>
+                            <div class="container_weather__add-info__compass_content_arrow_wind-speed" id="wind-speed">
+                            </div>
+                            <div class="divider divider-north">
+                                <span class="divider__text divider__text-north">N</span>
+                            </div>
+                            <div class="divider divider-south">
+                                <span class="divider__text divider__text-south">S</span>
+                            </div>
+                            <div class="divider divider-east">
+                                <span class="divider__text divider__text-east">E</span>
+                            </div>
+                            <div class="divider divider-west">
+                                <span class="divider__text divider__text-west">W</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="divider divider-west">
-                  <span class="divider__text divider__text-west">W</span>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="container__error-container" id="error-container"></div>
-        </div>
+                <div class="container__error-container" id="error-container"></div>
+            </div>
 
-        <div class="block-2-3">
-          <div class="block-clothes">
-            <div class="block-clothes--header">
-              <h2>Как одеться??</h2>
-              <button class="button imIce">Я мерзляк</button>
-              <button class="button imHot">Я горячая штучка</button>
+            <div class="block-2-3">
+                <div class="block-clothes">
+                    <div class="block-clothes--header">
+                        <h2>Как одеться??</h2>
+                        <button class="button imIce">Я мерзляк</button>
+                        <button class="button imHot">Я горячая штучка</button>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/1.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/2.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/3.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/4.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/5.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/1.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/2.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/3.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/4.jpg" alt="clothes-pack" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/clothes/5.jpg" alt="clothes-pack" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="container_weather__advice">
+                    <div class="container_weather__advice_title">
+                        Affirmation of the day
+                    </div>
+                    <div class="container_weather__advice_content" id="container_advice"></div>
+                </div>
+                <div class="block-3">
+                    <div class="motivation">
+                        <div class="gif">гифка дня</div>
+                    </div>
+                    <div class="quote">цитата дня</div>
+                </div>
             </div>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/1.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/2.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/3.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/4.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/5.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/1.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/2.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/3.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/4.jpg" alt="clothes-pack"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/5.jpg" alt="clothes-pack"/>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-          <div class="container_weather__advice">
-            <div class="container_weather__advice_title">
-              Affirmation of the day
-            </div>
-            <div
-              class="container_weather__advice_content"
-              id="container_advice"
-            ></div>
-          </div>
-          <div class="block-3">
-            <div class="motivation">
-              <div class="gif">гифка дня</div>
-            </div>
-            <div class="quote">цитата дня</div>
-          </div>
         </div>
-      </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script type="module" src="main.js"></script>
-    <script
-      type="module"
-      src="./assets/scripts/weather/weather-main.js"
-    ></script>
+    <script type="module" src="./assets/scripts/weather/weather-main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/scripts/swiper/swiper.js"></script>
-  </body>
+</body>
+
 </html>
