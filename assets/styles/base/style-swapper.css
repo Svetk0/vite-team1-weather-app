@@ -12,8 +12,8 @@ body {
   padding: 0;
 }
 .swiper {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%
 }
 .swiper-slide {
   text-align: center;

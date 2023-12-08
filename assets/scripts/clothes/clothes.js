@@ -1,9 +1,12 @@
-import * as fetchDataModule from "./../weather/fetchDataModule.js";
+import { fetchData } from "./../weather/fetchDataModule.js";
+import { getCurrentLocation } from "./../weather/locationModule.js";
+import { temperatureElement } from "./../weather/constants.js";
 
 const buttonImHot = document.querySelector(".imHot");
 const buttonImCold = document.querySelector(".imIce");
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const tempError = document.querySelector(".clothes-error");
+let currentTempa;
 
 //добавим в обработчик анонимную функцию, которая будет вызвана при клике на соответствующую кнопку
 buttonImHot.addEventListener("click", () => handleClick("hot"));
@@ -12,11 +15,19 @@ buttonImCold.addEventListener("click", () => handleClick("cold"));
 async function handleClick(type) {
   try {
     //определяем температуру
-    const temperature = await checkTemperature();
-    console.log(temperature);
+    const location = await getCurrentLocation();
+    const data = await fetchData(location);
+    let previousTempa = parseInt(data.main.temp);
+    let nextTempa = parseInt(temperatureElement.textContent);
+    currentTempa = nextTempa || previousTempa;
+    //temperatureElement.textContent = parseInt(data.main.temp);
+
+    console.log("ПРЕДЫДУЩАЯ ТЕМПЕРАТУРА:", previousTempa);
+    console.log("СЛЕДУЮЩАЯ ТЕМПЕРАТУРА:", nextTempa);
+    console.log("ТЕКУЩАЯ ТЕМПЕРАТУРА:", currentTempa);
 
     // в зависимости от типа нажатой кнопки и показанной температуры, определяем массив изображений
-    const imageArray = getImageArray(type, temperature);
+    const imageArray = getImageArray(type, currentTempa);
 
     //в зависимости от полученного массива, отрисовываем слайдер
     renderImages(imageArray);
@@ -28,7 +39,7 @@ async function handleClick(type) {
   }
 }
 
-function getImageArray(type, temperature) {
+function getImageArray(type, currentTempa) {
   const imageForHotLess0 = [
     "/assets/images/clothes/1.jpg",
     "/assets/images/clothes/2.jpg",
@@ -59,9 +70,9 @@ function getImageArray(type, temperature) {
   ];
 
   if (type === "hot") {
-    return temperature > 0 ? imageForHotMore0 : imageForHotLess0;
+    return currentTempa > 0 ? imageForHotMore0 : imageForHotLess0;
   } else if (type === "cold") {
-    return temperature < 0 ? imageForColdLess0 : imageForColdMore0;
+    return currentTempa < 0 ? imageForColdLess0 : imageForColdMore0;
   }
 }
 
@@ -89,19 +100,3 @@ function createNewSlide(image) {
   slideDiv.appendChild(img);
   swiperWrapper.appendChild(slideDiv);
 }
-
-// async function checkTemperature() {
-//   const cityInput = document.querySelector("#city");
-//   //const data = await fetchDataModule(cityInput.value);
-//   await fetchDataModule.fetchData({ latitude: 0, longitude: 0 });
-//   return parseInt(data.main.temp);
-// }
-
-async function checkTemperature() {
-  const cityInput = document.querySelector("#city");
-  // const data = await fetchDataModule.fetchData(cityInput.value);
-  const data = await fetchDataModule.fetchData({ latitude: 0, longitude: 0 });
-  return parseInt(data.main.temp);
-}
-
-//
