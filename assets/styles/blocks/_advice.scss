@@ -1,6 +1,6 @@
 /* контейнер советов*/
 
-.container_weather__advice {
+.container_addInfo__advice {
     display: grid;
     grid-template-rows: 12fr;
     padding: 0.8rem;
@@ -13,7 +13,7 @@
 }
 
 /*контейнер советов название*/
-.container_weather__advice_title {
+.container_addInfo__advice_title {
     display: flex;
     justify-self: flex-start;
     font-size: $block-title-fsize;
@@ -24,7 +24,7 @@
 }
 
 /*контейнер советов контент*/
-.container_weather__advice_content {
+.container_addInfo__advice_content {
     font-style: italic;
     font-size:$block-body-fsize;
     margin-top: 5px;

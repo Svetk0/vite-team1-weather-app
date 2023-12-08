@@ -373,7 +373,7 @@ a, button {
 }
 
 /* контейнер советов*/
-.container_weather__advice {
+.container_addInfo__advice {
   display: grid;
   grid-template-rows: 12fr;
   padding: 0.8rem;
@@ -385,7 +385,7 @@ a, button {
 }
 
 /*контейнер советов название*/
-.container_weather__advice_title {
+.container_addInfo__advice_title {
   display: flex;
   justify-self: flex-start;
   font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
@@ -394,7 +394,7 @@ a, button {
 }
 
 /*контейнер советов контент*/
-.container_weather__advice_content {
+.container_addInfo__advice_content {
   font-style: italic;
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   margin-top: 5px;
