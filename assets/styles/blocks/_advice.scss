@@ -1,0 +1,31 @@
+/* контейнер советов*/
+
+.container_addInfo__advice {
+    display: grid;
+    grid-template-rows: 12fr;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background-color: rgba(216, 207, 207, 0.672);
+    color:  #405fc3;
+    border-radius: $block-radius;
+    width: 95%;
+    
+}
+
+/*контейнер советов название*/
+.container_addInfo__advice_title {
+    display: flex;
+    justify-self: flex-start;
+    font-size: $block-title-fsize;
+    font-weight: 700;
+    text-align: center;
+    
+
+}
+
+/*контейнер советов контент*/
+.container_addInfo__advice_content {
+    font-style: italic;
+    font-size:$block-body-fsize;
+    margin-top: 5px;
+}
