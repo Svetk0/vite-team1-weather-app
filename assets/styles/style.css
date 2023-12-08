@@ -79,7 +79,7 @@ a, button {
   display: flex;
   flex-direction: column;
   width: 45%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

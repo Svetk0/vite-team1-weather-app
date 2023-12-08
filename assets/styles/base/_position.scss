@@ -3,13 +3,14 @@
   flex-direction: row;
   flex: 1 1 98vw;
   margin: 0 auto;
+  
 }
 
 .block-weather {
   display: flex;
   flex-direction: column;
   width: 45%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
 }
