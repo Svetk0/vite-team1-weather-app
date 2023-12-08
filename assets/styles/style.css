@@ -156,12 +156,12 @@ a, button {
 /*местоположение*/
 #location {
   justify-self: center;
-  font-size: clamp(1.7rem, 0.5rem + 2.5vw, 2rem);
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
 }
 
 /*температура*/
 #temperature {
-  font-size: clamp(1.7rem, 0.5rem + 2.5vw, 2rem);
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
   justify-self: center;
 }
 
@@ -174,7 +174,7 @@ a, button {
 
 /*описание погодных условий*/
 #description {
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 1.2rem);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -208,7 +208,6 @@ a, button {
   margin-right: clamp(0.25rem, 0.25rem + 2.5vw, 0.5rem);
   background-color: rgba(33, 31, 31, 0.4);
   color: white;
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 2rem);
   border-radius: 20px;
 }
 
@@ -235,7 +234,7 @@ a, button {
 
 /*компас название контейнера*/
 .container__add-info__feels_like_title, .container_weather__add-info__compass_title {
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
   color: white;
   align-self: flex-start;
   margin: 0.5rem;
@@ -370,33 +369,35 @@ a, button {
   background-color: rgba(143, 92, 92, 0.438);
   color: rgb(238, 230, 219);
   border-radius: 20px;
-  font-size: clamp(0.8rem, 0.5rem + 2.5vw, 1.2rem);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
 }
 
 /* контейнер советов*/
 .container_weather__advice {
   display: grid;
   grid-template-rows: 12fr;
-  padding: 2rem;
-  margin: 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-radius: 5px;
-  font-size: 26px;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: rgba(216, 207, 207, 0.672);
+  color: #405fc3;
+  border-radius: 20px;
+  width: 95%;
 }
 
 /*контейнер советов название*/
 .container_weather__advice_title {
-  color: #beb8b8;
   display: flex;
   justify-self: flex-start;
-  font-size: 24px;
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-weight: 700;
+  text-align: center;
 }
 
 /*контейнер советов контент*/
 .container_weather__advice_content {
   font-style: italic;
-  font-size: 32px;
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  margin-top: 5px;
 }
 
 /*                                     */
