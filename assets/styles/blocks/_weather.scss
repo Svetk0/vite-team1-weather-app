@@ -4,6 +4,9 @@ $block-background-color: rgba(255, 255, 255, 0.581);
 $block-background-color-main: rgba(33, 31, 31, 0.4);
 $block-title-fsize:clamp(16px, 0.2rem + 2.5vw, 24px);
 $block-body-fsize:clamp(14px, 0.2rem + 2.5vw, 20px);
+$addInfo-body-fsize:clamp(12px, 0.1rem + 2.5vw, 16px);
+$addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
+
 
 .container_weather__input {
     display: flex;

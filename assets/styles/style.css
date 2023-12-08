@@ -73,6 +73,8 @@ a, button {
   flex-direction: row;
   flex: 1 1 98vw;
   margin: 0 auto;
+  justify-content: space-between;
+  gap: clamp(20px, 0.1rem + 5vw, 200px);
 }
 
 .block-weather {
@@ -374,21 +376,21 @@ a, button {
 
 /* контейнер советов*/
 .container_addInfo__advice {
-  display: grid;
-  grid-template-rows: 12fr;
+  display: flex;
+  flex-direction: column;
   padding: 0.8rem;
   margin-top: 1rem;
   background-color: rgba(216, 207, 207, 0.672);
   color: #405fc3;
   border-radius: 20px;
-  width: 95%;
+  width: 70%;
 }
 
 /*контейнер советов название*/
 .container_addInfo__advice_title {
   display: flex;
   justify-self: flex-start;
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(14px, 0.1rem + 2.5vw, 18px);
   font-weight: 700;
   text-align: center;
 }
@@ -396,7 +398,7 @@ a, button {
 /*контейнер советов контент*/
 .container_addInfo__advice_content {
   font-style: italic;
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
+  font-size: clamp(12px, 0.1rem + 2.5vw, 16px);
   margin-top: 5px;
 }
 
