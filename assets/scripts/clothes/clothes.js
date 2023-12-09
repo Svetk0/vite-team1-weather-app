@@ -3,6 +3,7 @@ import { getCurrentLocation } from "./../weather/locationModule.js";
 import { temperatureElement } from "./../weather/constants.js";
 
 const buttonImHot = document.querySelector(".imHot");
+console.log(buttonImHot);
 const buttonImCold = document.querySelector(".imIce");
 const swiperWrapper = document.querySelector(".swiper-wrapper");
 const tempError = document.querySelector(".clothes-error");
@@ -26,10 +27,13 @@ async function handleClick(type) {
     console.log("СЛЕДУЮЩАЯ ТЕМПЕРАТУРА:", nextTempa);
     console.log("ТЕКУЩАЯ ТЕМПЕРАТУРА:", currentTempa);
 
+    swiperWrapper.innerHTML = "";
+
     // в зависимости от типа нажатой кнопки и показанной температуры, определяем массив изображений
     const imageArray = getImageArray(type, currentTempa);
 
     //в зависимости от полученного массива, отрисовываем слайдер
+
     renderImages(imageArray);
   } catch (error) {
     console.error("Произошла ошибка при получении температуры:", error.message);

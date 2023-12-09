@@ -100,43 +100,15 @@
         <div class="block-2-3">
           <div class="block-clothes">
             <div class="block-clothes--header">
-              <h2>Как одеться??</h2>
-              <button class="button imIce">Я мерзляк</button>
-              <button class="button imHot">Я горячая штучка</button>
+              <h2>Как одеться?</h2>
+              <div class="block-clothes--button-box">
+                <button class="button imIce">Я мерзляк</button>
+                <button class="button imHot">Я горячая штучка</button>
+              </div>
+              <div class="clothes-error"></div>
             </div>
             <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/1.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/2.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/3.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/4.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/5.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/1.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/2.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/3.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/4.jpg" alt="clothes-pack" />
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/images/clothes/5.jpg" alt="clothes-pack" />
-                </div>
-              </div>
+              <div class="swiper-wrapper"></div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
@@ -167,6 +139,7 @@
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./assets/scripts/swiper/swiper.js"></script>
+    <script type="module" src="./assets/scripts/clothes/clothes.js"></script>
+    <script src="./assets/scripts/clothes/swiper.js"></script>
   </body>
 </html>
