@@ -5,7 +5,7 @@
   flex: 1 1 98vw;
   margin: 0 auto;
   justify-content: space-between;
-  gap: clamp(20px, 0.1rem + 5vw, 200px);
+  gap: clamp(20px, 0.1rem + 5vw, 150px);
   
 }
 
@@ -23,27 +23,12 @@
   display: flex;
   flex-direction: column;
   width: 45%;
+  flex: 50%;
 }
 
 
-.block-clothes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.block-clothes--header {
-display: block;
-}
-.clothes-images {
-  display: flex;
-  justify-content: space-between;
-}
 
-.clothes-advice {
-  display: flex;
-}
+
 
 .motivation {
   display: flex;

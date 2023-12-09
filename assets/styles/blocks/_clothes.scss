@@ -1,0 +1,45 @@
+.block-clothes {
+    width: 100%;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.block-clothes-header {
+    display: block;
+    
+}
+.sw-1 {
+    
+}
+.swiper-wrapper {
+   width: 16rem;
+   height: 24rem;
+   
+}
+.swiper-slide{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+.sw-2 {
+    display:contents;
+}
+/* ВОзможно не актуальные стили */
+/*
+.clothes-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clothes-advice {
+    display: flex;
+}
+*/
+
+/*
+ width: clamp(150px, 1rem + 5vw, 300px);
+    height: clamp(200px, 1rem + 5vw, 400px);
+*/

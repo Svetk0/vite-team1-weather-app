@@ -75,7 +75,7 @@ a, button {
   flex: 1 1 98vw;
   margin: 0 auto;
   justify-content: space-between;
-  gap: clamp(20px, 0.1rem + 5vw, 200px);
+  gap: clamp(20px, 0.1rem + 5vw, 150px);
 }
 
 .block-weather {
@@ -91,27 +91,7 @@ a, button {
   display: flex;
   flex-direction: column;
   width: 45%;
-}
-
-.block-clothes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.block-clothes--header {
-  display: block;
-}
-
-.clothes-images {
-  display: flex;
-  justify-content: space-between;
-}
-
-.clothes-advice {
-  display: flex;
+  flex: 50%;
 }
 
 .motivation {
@@ -146,10 +126,11 @@ a, button {
 
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
-  display: grid;
-  grid-template-rows: 12fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: clamp(0.7rem, 0.5rem + 2.5vw, 2rem);
+  align-items: center;
+  padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
   margin-top: 2rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
@@ -171,7 +152,7 @@ a, button {
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-  width: clamp(5rem, 3rem + 10vw, 10rem);
+  width: clamp(5rem, 3rem + 10vw, 8rem);
   justify-self: center;
   margin: 1rem 0 1rem 0;
 }
@@ -192,7 +173,7 @@ a, button {
 .container_weather__main-info_min-max {
   display: flex;
   gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   text-align: center;
 }
 
@@ -220,7 +201,7 @@ a, button {
 #temperature_feels_like {
   color: white;
   align-self: center;
-  font-size: clamp(3rem, 0.5rem + 2.5vw, 4rem);
+  font-size: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
   margin-top: 2rem;
 }
 
@@ -238,7 +219,7 @@ a, button {
 
 /*компас название контейнера*/
 .container__add-info__feels_like_title, .container_weather__add-info__compass_title {
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   color: white;
   align-self: flex-start;
   margin: 0.5rem;
@@ -376,6 +357,48 @@ a, button {
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
 }
 
+.block-clothes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-clothes-header {
+  display: block;
+}
+
+.swiper-wrapper {
+  width: 16rem;
+  height: 24rem;
+}
+
+.swiper-slide {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
+.sw-2 {
+  display: contents;
+}
+
+/* ВОзможно не актуальные стили */
+/*
+.clothes-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clothes-advice {
+    display: flex;
+}
+*/
+/*
+ width: clamp(150px, 1rem + 5vw, 300px);
+    height: clamp(200px, 1rem + 5vw, 400px);
+*/
 /* контейнер советов*/
 .container_addInfo__advice {
   display: flex;

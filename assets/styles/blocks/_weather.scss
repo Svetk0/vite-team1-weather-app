@@ -32,10 +32,11 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
-    display: grid;
-    grid-template-rows: 12fr;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: clamp(0.7rem, 0.5rem + 2.5vw, 2rem);
+    align-items: center;
+    padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
     margin-top: 2rem;
     
     background-color:$block-background-color-main;
@@ -60,7 +61,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-    width: clamp(5rem, 3rem + 10vw, 10rem);
+    width: clamp(5rem, 3rem + 10vw, 8rem);
     justify-self: center;
     margin: 1rem 0 1rem 0;
 }
@@ -81,7 +82,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 .container_weather__main-info_min-max {
     display: flex;
     gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
-    font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
+    font-size: $block-body-fsize;
     text-align: center;
 }
 
@@ -113,7 +114,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     color: white;
     align-self: center;
     
-    font-size: clamp(3rem, 0.5rem + 2.5vw, 4rem);
+    font-size: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
     margin-top: 2rem;
 
 }
@@ -133,7 +134,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 
 /*компас название контейнера*/
 .container__add-info__feels_like_title,.container_weather__add-info__compass_title {
-    font-size: $block-title-fsize;
+    font-size: $block-body-fsize;
     color: white;
     
     align-self: flex-start;
