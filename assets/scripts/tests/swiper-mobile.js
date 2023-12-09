@@ -40,6 +40,8 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
 });
 
+
+
 const packMedium = document.querySelector('.pack-medium');
 const packLight = document.querySelector('.pack-light');
 const packWarm = document.querySelector('.pack-warm');
@@ -66,8 +68,17 @@ function determineSeason(currentTemperature) {
     //console.log('Season: ' + season);
     return season;
 }
+
+function readDOMtemperature() { 
+    let currentTempStr = document.querySelector('#temperature').textContent;
+    let currentTempStrEdit = currentTempStr.substring(0, currentTempStr.length - 2);
+    let currentTemp = Number(currentTempStrEdit);
+    return currentTemp
+}
+
 function changePackDependsOnTemperature() {
-    let season = determineSeason(0);
+    let domTemp = readDOMtemperature();
+    let season = determineSeason(domTemp);
     switch (season) {
         case 'winter':
             console.log('winter pack');

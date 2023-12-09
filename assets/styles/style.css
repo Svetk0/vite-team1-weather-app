@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/*------- colors  ------*/
-/* ---- mixins -----*/
-/*----- typo mixins -----*/
-/*--------- base -------*/
+/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -18,6 +15,8 @@ html {
   line-height: normal;
   margin: 0;
   color: black;
+  background-color: black;
+  height: 100vh;
 }
 
 a, button {
@@ -78,44 +77,24 @@ a, button {
   flex: 1 1 98vw;
   margin: 0 auto;
   justify-content: space-between;
-  gap: clamp(20px, 0.1rem + 5vw, 200px);
+  gap: clamp(20px, 0.1rem + 5vw, 150px);
 }
 
 .block-weather {
   display: flex;
   flex-direction: column;
-  flex: 40%;
+  flex: 30%;
   justify-content: flex-start;
   align-items: center;
   padding: 5px;
+  padding-left: 10px;
 }
 
 .block-2-3 {
   display: flex;
   flex-direction: column;
   width: 45%;
-}
-
-.block-clothes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.block-clothes--header {
-  display: block;
-  width: 100%;
-}
-
-.clothes-images {
-  display: flex;
-  justify-content: space-between;
-}
-
-.clothes-advice {
-  display: flex;
+  flex: 50%;
 }
 
 .motivation {
@@ -137,11 +116,12 @@ a, button {
   margin-top: 2rem;
   color: #333;
   background-color: rgba(238, 238, 238, 0.7568627451);
-  width: 95%;
-  height: 2.5rem;
+  width: 100%;
+  max-height: 2.2rem;
+  min-height: 2rem;
   border-radius: 10px;
   border: none;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 #city:focus {
@@ -150,15 +130,18 @@ a, button {
 
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
-  display: grid;
-  grid-template-rows: 12fr;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: clamp(0.7rem, 0.5rem + 2.5vw, 2rem);
-  margin-top: 2rem;
+  align-items: center;
+  padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 20px;
   width: 100%;
+  max-height: 55vh;
 }
 
 /*местоположение*/
@@ -175,15 +158,15 @@ a, button {
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-  width: clamp(5rem, 3rem + 10vw, 10rem);
+  width: clamp(3rem, 1.5rem + 10vw, 5rem);
   justify-self: center;
-  margin: 1rem 0 1rem 0;
+  margin: 0.3rem 0 0.3rem 0;
 }
 
 /*описание погодных условий*/
 #description {
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -196,7 +179,7 @@ a, button {
 .container_weather__main-info_min-max {
   display: flex;
   gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
-  font-size: clamp(1rem, 0.5rem + 2.5vw, 1.5rem);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   text-align: center;
 }
 
@@ -204,10 +187,11 @@ a, button {
 .container_weather__add-info {
   display: flex;
   flex: 100%;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   width: 100%;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
+  max-height: 35vh;
 }
 
 /*контейнер доп информации ощущается как*/
@@ -224,7 +208,7 @@ a, button {
 #temperature_feels_like {
   color: white;
   align-self: center;
-  font-size: clamp(3rem, 0.5rem + 2.5vw, 4rem);
+  font-size: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
   margin-top: 2rem;
 }
 
@@ -242,7 +226,7 @@ a, button {
 
 /*компас название контейнера*/
 .container__add-info__feels_like_title, .container_weather__add-info__compass_title {
-  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   color: white;
   align-self: flex-start;
   margin: 0.5rem;
@@ -380,33 +364,71 @@ a, button {
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
 }
 
-.clothes-error {
-  display: none;
-}
-
-.block-clothes--button-box {
+.block-clothes {
   display: flex;
-  justify-content: space-between;
-  margin-top: 37px;
+  flex: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.imIce,
-.imHot {
-  width: 48%;
-  border-radius: 20px;
-  padding: 19px 18px;
-  background-color: rgba(33, 31, 31, 0.4);
-  font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
-  color: #FFF;
-  cursor: pointer;
-  border: none;
+.block-clothes-header {
+  display: block;
 }
 
-.block-clothes--header h2 {
-  margin-top: 45px;
+.clothes-header-title {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(60, 59, 59);
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
   text-align: center;
 }
 
+.sw-1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.swiper {
+  width: 256px;
+  height: 360px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  position: absolute;
+  margin-bottom: 120%;
+}
+
+.swiper-slide {
+  background-color: transparent;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  width: 256px;
+  height: 360px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sw-2 {
+  display: none;
+}
+
+/* ВОзможно не актуальные стили */
+/*
+.clothes-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clothes-advice {
+    display: flex;
+}
+*/
+/*
+ width: clamp(150px, 1rem + 5vw, 300px);
+    height: clamp(200px, 1rem + 5vw, 400px);
+*/
 /* контейнер советов*/
 .container_addInfo__advice {
   display: flex;
@@ -417,6 +439,8 @@ a, button {
   color: #405fc3;
   border-radius: 20px;
   width: 70%;
+  align-self: center;
+  justify-self: center;
 }
 
 /*контейнер советов название*/
@@ -435,6 +459,23 @@ a, button {
   margin-top: 5px;
 }
 
-/*                                     */
+.button {
+  width: 130px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: rgba(133, 127, 127, 0.4);
+  color: #fff;
+  padding: 3px;
+}
+
+.imIce {
+  background-color: rgba(56, 66, 117, 0.4);
+}
+
+.imHot {
+  background-color: rgba(127, 92, 46, 0.4);
+} /*                                     */
 /* ------- THE TEST ZONE ---- */
-/*                                     *//*# sourceMappingURL=style.css.map */
+/*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */

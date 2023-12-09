@@ -1,28 +1,63 @@
-.clothes-error {
-   display: none; 
+.block-clothes {
+    
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+.block-clothes-header {
+    display: block;
+    
+}
+.clothes-header-title {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(60, 59, 59);
+    font-size: $block-title-fsize;
+    text-align: center;
+}
+.sw-1 {
+display: flex;
+flex-direction: column;
+margin-top: 10px;
+}
+.swiper {
+    width: 256px;
+    height: 360px;
+}
+.swiper-wrapper {
+    display: flex;
+    position: absolute;
+    margin-bottom: 120%;
+    
+}
+.swiper-slide{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    width: 256px;
+    height: 360px;
+   justify-content: flex-start;
+   align-items: center;
+   
 }
 
-.block-clothes--button-box {
-   display: flex;
-   justify-content: space-between;
-   margin-top: 37px;
+.sw-2 {
+    display:none;
+}
+/* ВОзможно не актуальные стили */
+/*
+.clothes-images {
+    display: flex;
+    justify-content: space-between;
 }
 
-.imIce,
-.imHot {
-   width: 48%;
-   border-radius: 20px;
-   padding: 19px 18px;
-   background-color: rgba(33, 31, 31, 0.4);
-   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
-   color: #FFF;
-   cursor: pointer;
-   border: none;
+.clothes-advice {
+    display: flex;
 }
+*/
 
-.block-clothes--header {
-   h2 {
-      margin-top: 45px;
-      text-align: center;
-   }
-}
+/*
+ width: clamp(150px, 1rem + 5vw, 300px);
+    height: clamp(200px, 1rem + 5vw, 400px);
+*/

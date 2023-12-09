@@ -9,7 +9,8 @@ html {
     padding: 0;
     /*height: 100%;*/
     @include typo-body;
-    
+    background-color: black;
+    height: 100vh;
 }
 
 a, button {
