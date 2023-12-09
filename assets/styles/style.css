@@ -448,7 +448,24 @@ a, button {
   margin-top: 5px;
 }
 
-/*                                     */
+.button {
+  width: 130px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: rgba(133, 127, 127, 0.4);
+  color: #fff;
+  padding: 3px;
+}
+
+.imIce {
+  background-color: rgba(56, 66, 117, 0.4);
+}
+
+.imHot {
+  background-color: rgba(127, 92, 46, 0.4);
+} /*                                     */
 /* ------- THE TEST ZONE ---- */
 /*                                     */
 html {
