@@ -362,8 +362,8 @@ a, button {
 }
 
 .block-clothes {
-  width: 100%;
   display: flex;
+  flex: 50%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -373,20 +373,32 @@ a, button {
   display: block;
 }
 
+.clothes-header-title {
+  color: #fff;
+  text-shadow: 1px 1px 2px rgb(60, 59, 59);
+  font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+}
+
 .sw-1 {
-  width: -moz-fit-content;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  position: absolute;
+  margin-bottom: 120%;
 }
 
 .swiper-slide {
   background-color: transparent;
   border-radius: 20px;
   border: 2px solid #fff;
-  width: 18rem;
-  height: 20rem;
-  justify-content: center;
+  width: 256px;
+  height: 360px;
+  justify-content: flex-start;
   align-items: center;
-  transform: translate Opx, -50%;
 }
 
 .sw-2 {
