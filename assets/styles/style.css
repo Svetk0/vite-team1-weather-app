@@ -398,35 +398,80 @@ a, button {
  width: clamp(150px, 1rem + 5vw, 300px);
     height: clamp(200px, 1rem + 5vw, 400px);
 */
+/*-----   Swiper-desktop -----*/
 .sw-1 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
+  /*display:*/
+  margin-top: 5px;
+  display: block;
 }
 
 .swiper {
+  width: 600px;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 35px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-theme-color: hsl(340, 90%, 44%);
+  border-radius: 0px;
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 30px));
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.3);
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 5);
+}
+
+/*-----   Swiper-mobile -----*/
+.sw-2 {
+  display: none;
+  flex-direction: column;
+}
+
+.mySwiper-mobile {
   width: 256px;
   height: 360px;
 }
 
-.swiper-wrapper {
+.swiper-wrapper-mobile {
   display: flex;
   position: absolute;
   margin-bottom: 120%;
 }
 
-.swiper-slide {
+.swiper-slide-mobile {
   background-color: transparent;
   border-radius: 20px;
   border: 2px solid #fff;
-  width: 256px;
-  height: 360px;
   justify-content: flex-start;
   align-items: center;
 }
 
-.sw-2 {
-  display: none;
+.swiper-slide-mobile > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* контейнер советов*/
@@ -434,7 +479,7 @@ a, button {
   display: flex;
   flex-direction: column;
   padding: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   background-color: rgba(216, 207, 207, 0.672);
   color: #405fc3;
   border-radius: 20px;

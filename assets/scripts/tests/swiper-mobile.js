@@ -34,7 +34,7 @@
 //   });   
 
 //Карточки
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper-mobile", {
     effect: "cards",
     grabCursor: true,
     loop: true,
@@ -98,5 +98,5 @@ function changePackDependsOnTemperature() {
 
 
 }
-document.querySelector('.b-1').addEventListener('click', changePack);
-document.querySelector('.b-2').addEventListener('click', changePackDependsOnTemperature);
+
+document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
