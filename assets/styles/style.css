@@ -383,6 +383,21 @@ a, button {
   text-align: center;
 }
 
+/* ВОзможно не актуальные стили */
+/*
+.clothes-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clothes-advice {
+    display: flex;
+}
+*/
+/*
+ width: clamp(150px, 1rem + 5vw, 300px);
+    height: clamp(200px, 1rem + 5vw, 400px);
+*/
 .sw-1 {
   display: flex;
   flex-direction: column;
@@ -414,21 +429,6 @@ a, button {
   display: none;
 }
 
-/* ВОзможно не актуальные стили */
-/*
-.clothes-images {
-    display: flex;
-    justify-content: space-between;
-}
-
-.clothes-advice {
-    display: flex;
-}
-*/
-/*
- width: clamp(150px, 1rem + 5vw, 300px);
-    height: clamp(200px, 1rem + 5vw, 400px);
-*/
 /* контейнер советов*/
 .container_addInfo__advice {
   display: flex;
@@ -476,6 +476,8 @@ a, button {
 
 .imHot {
   background-color: rgba(127, 92, 46, 0.4);
-} /*                                     */
+}
+
+/*                                     */
 /* ------- THE TEST ZONE ---- */
 /*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */

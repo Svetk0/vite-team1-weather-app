@@ -16,35 +16,7 @@
     font-size: $block-title-fsize;
     text-align: center;
 }
-.sw-1 {
-display: flex;
-flex-direction: column;
-margin-top: 10px;
-}
-.swiper {
-    width: 256px;
-    height: 360px;
-}
-.swiper-wrapper {
-    display: flex;
-    position: absolute;
-    margin-bottom: 120%;
-    
-}
-.swiper-slide{
-    background-color: transparent;
-    border-radius: 20px;
-    border: 2px solid #fff;
-    width: 256px;
-    height: 360px;
-   justify-content: flex-start;
-   align-items: center;
-   
-}
 
-.sw-2 {
-    display:none;
-}
 /* ВОзможно не актуальные стили */
 /*
 .clothes-images {
