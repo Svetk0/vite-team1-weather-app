@@ -11,17 +11,18 @@
     
 }
 .sw-1 {
-    
+width: fit-content;
 }
-.swiper-wrapper {
-   width: 16rem;
-   height: 24rem;
-   
-}
+
 .swiper-slide{
     background-color: transparent;
     border-radius: 20px;
     border: 2px solid #fff;
+    width: 18rem;
+   height: 20rem;
+   justify-content: center;
+   align-items: center;
+   transform: translate (Opx, -50%);
 }
 
 .sw-2 {

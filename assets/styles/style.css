@@ -81,10 +81,11 @@ a, button {
 .block-weather {
   display: flex;
   flex-direction: column;
-  flex: 40%;
+  flex: 30%;
   justify-content: flex-start;
   align-items: center;
   padding: 5px;
+  padding-left: 10px;
 }
 
 .block-2-3 {
@@ -110,14 +111,15 @@ a, button {
 
 /*инпут введения города*/
 #city {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #333;
   background-color: rgba(238, 238, 238, 0.7568627451);
-  width: 95%;
-  height: 2.5rem;
+  width: 100%;
+  max-height: 2.2rem;
+  min-height: 1.7rem;
   border-radius: 10px;
   border: none;
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
 #city:focus {
@@ -131,11 +133,12 @@ a, button {
   justify-content: center;
   align-items: center;
   padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 20px;
   width: 100%;
+  max-height: 50vh;
 }
 
 /*местоположение*/
@@ -152,15 +155,15 @@ a, button {
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-  width: clamp(5rem, 3rem + 10vw, 8rem);
+  width: clamp(3rem, 1.5rem + 10vw, 5rem);
   justify-self: center;
-  margin: 1rem 0 1rem 0;
+  margin: 0.3rem 0 0.3rem 0;
 }
 
 /*описание погодных условий*/
 #description {
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
@@ -181,10 +184,11 @@ a, button {
 .container_weather__add-info {
   display: flex;
   flex: 100%;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   width: 100%;
   justify-content: space-between;
-  gap: 15px;
+  gap: 10px;
+  max-height: 35vh;
 }
 
 /*контейнер доп информации ощущается как*/
@@ -369,15 +373,20 @@ a, button {
   display: block;
 }
 
-.swiper-wrapper {
-  width: 16rem;
-  height: 24rem;
+.sw-1 {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .swiper-slide {
   background-color: transparent;
   border-radius: 20px;
   border: 2px solid #fff;
+  width: 18rem;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+  transform: translate Opx, -50%;
 }
 
 .sw-2 {

@@ -16,14 +16,15 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 
 /*инпут введения города*/
 #city {
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: #333;
     background-color: #eeeeeec1;
-    width: $block-weather-width;
-    height: 2.5rem;
+    width: 100%;
+    max-height: 2.2rem;
+    min-height: 1.7rem;
     border-radius: 10px;
     border: none;
-    padding-left: 20px;
+    padding-left: 25px;
 }
 
 #city:focus {
@@ -37,12 +38,13 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     justify-content: center;
     align-items: center;
     padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     
     background-color:$block-background-color-main;
     color: #fff;
     border-radius: $block-radius;
     width: 100%;
+    max-height: 50vh;
 }
 
 
@@ -61,15 +63,15 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 
 /*иконка в соотвествии с описанием погоды, приходит от api*/
 #icon {
-    width: clamp(5rem, 3rem + 10vw, 8rem);
+    width: clamp(3rem, 1.5rem + 10vw, 5rem);
     justify-self: center;
-    margin: 1rem 0 1rem 0;
+    margin: 0.3rem 0 0.3rem 0;
 }
 
 /*описание погодных условий*/
 #description {
     font-size: $block-body-fsize;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -90,10 +92,11 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 .container_weather__add-info {
     display: flex;
     flex: 100%;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     width: 100%;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
+    max-height: 35vh;
     
 }
 
