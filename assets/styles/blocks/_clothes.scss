@@ -14,11 +14,16 @@
     color: #fff;
     text-shadow: 1px 1px 2px rgb(60, 59, 59);
     font-size: $block-title-fsize;
+    text-align: center;
 }
 .sw-1 {
 display: flex;
 flex-direction: column;
 margin-top: 10px;
+}
+.swiper {
+    width: 256px;
+    height: 360px;
 }
 .swiper-wrapper {
     display: flex;
@@ -38,7 +43,7 @@ margin-top: 10px;
 }
 
 .sw-2 {
-    display:contents;
+    display:none;
 }
 /* ВОзможно не актуальные стили */
 /*

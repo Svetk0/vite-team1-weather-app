@@ -15,6 +15,7 @@ html {
   line-height: normal;
   margin: 0;
   color: black;
+  background-color: black;
 }
 
 a, button {
@@ -377,12 +378,18 @@ a, button {
   color: #fff;
   text-shadow: 1px 1px 2px rgb(60, 59, 59);
   font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
+  text-align: center;
 }
 
 .sw-1 {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+}
+
+.swiper {
+  width: 256px;
+  height: 360px;
 }
 
 .swiper-wrapper {
@@ -402,7 +409,7 @@ a, button {
 }
 
 .sw-2 {
-  display: contents;
+  display: none;
 }
 
 /* ВОзможно не актуальные стили */
@@ -430,6 +437,8 @@ a, button {
   color: #405fc3;
   border-radius: 20px;
   width: 70%;
+  align-self: center;
+  justify-self: center;
 }
 
 /*контейнер советов название*/
@@ -467,39 +476,4 @@ a, button {
   background-color: rgba(127, 92, 46, 0.4);
 } /*                                     */
 /* ------- THE TEST ZONE ---- */
-/*                                     */
-html {
-  background-color: #fff;
-}
-
-.swiper {
-  width: 300px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 2.1vw;
-    background-color: rgba(115, 189, 104, 0.519);
-  }
-}
-@media screen and (min-width: 1600px) {
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-  }
-}/*# sourceMappingURL=style.css.map */
+/*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */
