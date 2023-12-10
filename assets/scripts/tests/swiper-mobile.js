@@ -128,13 +128,13 @@ async function changePackDependsOnTemperature() {
 
 //function work() { /*...*/ }
 
-if (document.readyState == 'loading') {
-  // ещё загружается, ждём события
-  document.addEventListener('DOMContentLoaded', changePackDependsOnTemperature);
-} else {
-  // DOM готов!
-  changePackDependsOnTemperature();
-}
+// if (document.readyState == 'loading') {
+//   // ещё загружается, ждём события
+//   document.addEventListener('DOMContentLoaded', changePackDependsOnTemperature);
+// } else {
+//   // DOM готов!
+//   changePackDependsOnTemperature();
+// }
 
 
-// document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
+document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
