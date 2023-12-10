@@ -13,6 +13,16 @@ let currentTempa;
 buttonImHot.addEventListener("click", () => handleClick("hot"));
 buttonImCold.addEventListener("click", () => handleClick("cold"));
 
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    clearSwiperWrapper();
+  }
+});
+
+function clearSwiperWrapper() {
+  swiperWrapper.innerHTML = "";
+}
+
 async function handleClick(type) {
   try {
     //определяем температуру
