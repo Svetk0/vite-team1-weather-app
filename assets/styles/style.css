@@ -113,6 +113,7 @@ a, button {
 /*инпут введения города*/
 #city {
   margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #333;
   background-color: rgba(238, 238, 238, 0.7568627451);
   width: 100%;
