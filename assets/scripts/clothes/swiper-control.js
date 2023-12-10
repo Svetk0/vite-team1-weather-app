@@ -1,4 +1,5 @@
 const swiperDesktop = document.querySelector('.sw-1');
+const swiperDeskButtons = document.querySelector('.block-clothes--button-box');
 const swiperMobile = document.querySelector('.sw-2');
 const mobileWidth = 770; //px
 
@@ -12,17 +13,20 @@ function getScreenSize() {
 
     if (windowInnerWidth > mobileWidth) {
         console.log('desktop version, no wrap');
+        swiperDeskButtons.style.display = 'block';
         swiperDesktop.style.display = 'block';
         swiperMobile.style.display = 'none';
     }
     else { 
         console.log('mobile version, wrap: true');
+        swiperDeskButtons.style.display = 'none';
         swiperDesktop.style.display = 'none';
         swiperMobile.style.display = 'flex';
     }
 
 
 }
+getScreenSize();
 
 document.querySelector('.b-test').addEventListener('click', getScreenSize);
 
