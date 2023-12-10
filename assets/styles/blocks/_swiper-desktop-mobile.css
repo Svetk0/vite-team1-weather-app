@@ -3,10 +3,10 @@
   /*display:*/
   margin-top: 5px;
   display: block;
+  width: 100%;
 }
 
 .swiper {
-  width: 600px;
   height: 100%;
   margin-top: 30px;
   background-color: rgba(216, 207, 207, 0.672);
@@ -33,7 +33,7 @@
 }
 
 .swiper-slide:hover img {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .swiper-pagination {
