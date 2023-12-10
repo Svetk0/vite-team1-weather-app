@@ -7,3 +7,9 @@
   border-radius: 1.25rem;
   width: 21.875rem;
 }
+
+@media screen and (max-width: 768px) {
+  .block-3 {
+flex-direction: column;
+  }
+}

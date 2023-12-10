@@ -4,11 +4,10 @@ const fs = require('fs');
 const fsPromises = require('fs/promises')
 var router = express.Router();
 
+const folder = path.join('gifs')
+
 /* GET users listing. */
 router.get('/random', async function(req, res, next) {
-
-  console.log(__dirname)
-  const folder = path.join('gifs')
 
   // Получаем наименование гифки для отдачи
   const filename = await getRandomGif()
@@ -30,11 +29,40 @@ router.get('/random', async function(req, res, next) {
   });
 });
 
+router.get('/get_by_name', async function(req, res) {
+  const name = req.query.name
+
+  console.log(name)
+
+  const gifName = name + ".gif"
+  const existsGif = checkExistsGif(gifName)
+
+  try {
+    if (!existsGif) {
+      return res.status(400).send({
+        error: `Не удалось найти gif с именем ${gifName}`
+      })
+    }
+
+    // Создаем stream для отдачи файла
+    const stream = fs.createReadStream(path.join(folder, gifName));
+
+    stream.on('open', function () {
+      res.setHeader('Content-Type', "image/gif");
+      stream.pipe(res);
+    });
+  } catch (err) {
+    console.log(err)
+    return res.status(400).send({
+      error: `Не удалось найти gif с именем ${gifName}`
+    })
+  }
+})
+
 /*
   Получить рандомно наименование гифки из public папки
  */
 const getRandomGif = async () => {
-  const folder = path.join('gifs')
 
   try {
 
@@ -58,6 +86,16 @@ const getRandomGif = async () => {
     }
   } catch (err) {
     console.log(err)
+  }
+}
+
+const checkExistsGif = (name) => {
+  try {
+    // Считываем все файлы из директории
+    return fs.existsSync(path.join(folder, name))
+  } catch (err) {
+    console.log(err)
+    return false
   }
 }
 
