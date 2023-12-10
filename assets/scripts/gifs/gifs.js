@@ -12,6 +12,7 @@ async function getGif() {
         const obj = URL.createObjectURL(blob)
         const img = document.createElement('img')
         img.src = obj
+        img.classList.add('container_block-3__gif')
         return img;
     } catch (err) {
         console.log('Ошибка получения gif:', err);

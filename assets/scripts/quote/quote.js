@@ -20,7 +20,8 @@ async function getQuote() {
         const quote = await response.json()
 
         const paragraph = document.createElement('p')
-        paragraph.textContent = quote.quoteText
+        paragraph.textContent = quote.quoteText + `©`
+        paragraph.classList.add('container_block-3__quote')
         return paragraph;
     } catch (err) {
         console.log('Ошибка получения цитаты:', err);
