@@ -86,8 +86,7 @@ a, button {
   flex: 30%;
   justify-content: flex-start;
   align-items: center;
-  padding: 5px;
-  padding-left: 10px;
+  padding: 5px 10px;
 }
 
 .block-2-3 {
@@ -202,6 +201,7 @@ a, button {
   background-color: rgba(33, 31, 31, 0.4);
   color: white;
   border-radius: 20px;
+  flex: 55%;
 }
 
 /*температура ощущается как*/
@@ -222,6 +222,7 @@ a, button {
   background-color: rgba(33, 31, 31, 0.4);
   color: white;
   border-radius: 20px;
+  flex: 45%;
 }
 
 /*компас название контейнера*/
@@ -423,7 +424,7 @@ a, button {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
