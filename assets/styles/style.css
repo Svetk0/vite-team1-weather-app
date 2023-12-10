@@ -1,8 +1,5 @@
 @charset "UTF-8";
-/*------- colors  ------*/
-/* ---- mixins -----*/
-/*----- typo mixins -----*/
-/*--------- base -------*/
+/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -96,6 +93,7 @@ a, button {
   display: flex;
   flex-direction: column;
   width: 45%;
+  flex: 50%;
   margin-right: 10px;
 }
 
@@ -441,6 +439,11 @@ a, button {
   margin-top: 5px;
   display: block;
   width: 100%;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 250px;
 }
 
 .swiper {
