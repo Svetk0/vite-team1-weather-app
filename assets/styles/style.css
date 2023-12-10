@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
+/*------- colors  ------*/
+/* ---- mixins -----*/
+/*----- typo mixins -----*/
+/*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -383,6 +386,38 @@ a, button {
   text-align: center;
 }
 
+.block-clothes--button-box {
+  display: flex;
+}
+
+.imHot,
+.imIce {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imHot img,
+.imIce img {
+  width: 30px;
+}
+
+.imIce:hover {
+  box-shadow: 0 0 10px 0 #344b7e inset, 0 0 10px 4px #344b7e;
+  background-color: rgba(216, 207, 207, 0.672);
+  color: #0f3035;
+  font-weight: 16px;
+  border: none;
+}
+
+.imHot:hover {
+  box-shadow: 0 0 10px 0 #c41e1e inset, 0 0 10px 4px #c41e1e;
+  background-color: rgba(216, 207, 207, 0.672);
+  color: #b31313;
+  font-weight: 16px;
+  border: none;
+}
+
 /* ВОзможно не актуальные стили */
 /*
 .clothes-images {
@@ -409,6 +444,7 @@ a, button {
   width: 600px;
   height: 100%;
   margin-top: 30px;
+  background-color: rgba(216, 207, 207, 0.672);
 }
 
 .swiper-slide {
@@ -419,6 +455,7 @@ a, button {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  padding: 20px 15px 20px;
 }
 
 .swiper-slide img {
@@ -428,6 +465,15 @@ a, button {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 35px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+}
+
+.swiper-pagination {
+  margin-bottom: 20px;
 }
 
 .swiper-pagination-bullet {
