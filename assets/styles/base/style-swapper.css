@@ -12,8 +12,9 @@ body {
   padding: 0;
 }
 .swiper {
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
 }
 .swiper-slide {
   text-align: center;
@@ -22,10 +23,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
+  height: 300px;
+  width: 431.5px
+
+
 }
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 35px;
+}
+
+.swiper-pagination-bullet {
+  --swiper-theme-color: hsl(340, 90%, 44%);
+  border-radius: 0px;
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,30px));
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
+}
+
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 5);
 }

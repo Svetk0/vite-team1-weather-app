@@ -9,9 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!--
     <link rel="stylesheet" href="assets/styles/base/style-swapper.css" />
-    -->
     <link rel="stylesheet" href="assets/styles/style.css" />
 
     <title>Vite App: Not only weather</title>
@@ -19,7 +17,8 @@
 
   <body>
     <div id="app">
-    
+      <!--    <h1 class="title">not only weather app</h1>-->
+      <!--    <button class="btn-title">hide title</button>-->
       <div class="container">
         <div class="block-weather">
           <div class="container_weather__input">
@@ -41,7 +40,6 @@
               id="icon"
               alt="bg-ph"
             />
-
             <div
               class="container__main-info__description"
               id="description"
@@ -98,88 +96,40 @@
 
           <div class="container__error-container" id="error-container"></div>
         </div>
-        <!--  ============ end weather block      ==============-->
+==================================
 
-        <!--  ============ START CLOTHES block      ==============-->
         <div class="block-2-3">
           <div class="block-clothes">
-            <div class="block-clothes-header">
-              <h2 class="clothes-header-title">Что по одежде?</h2>
-
+            <div class="block-clothes--header">
+              <h2>Как одеться?</h2>
               <div class="block-clothes--button-box">
-                <button class="button imIce">
-                  Я мерзляк
-                  <span>
-                    <img
-                      src="/assets/images/clothes/imCold.png"
-                      alt="cold emodzi"
-                  /></span>
-                </button>
-                <button class="button imHot">
-                  Я горячая штучка
-                  <span>
-                    <img
-                      src="/assets/images/clothes/imHot.png"
-                      alt="hot emodzi"
-                  /></span>
-                </button>
+                <button class="button imIce">Я мерзляк</button>
+                <button class="button imHot">Я горячая штучка</button>
               </div>
               <div class="clothes-error"></div>
             </div>
-
-            <!--  .sw-1 for turn on/off swiper -->
-            <div class="sw-1">
-              <div class="swiper mySwiper sw-1">
-                <div class="swiper-wrapper"></div>
-                <div class="swiper-pagination"></div>
-              </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-
-          <!-- Solomat Swiper Mobile TEST -->
-          <div class="test-swiper-mobile">
-            <div class="sw-2">
-             <!-- Solomat Swiper Mobile TEST -->
-  <div class="swiper-mobile mySwiper-mobile">
-    <div class="swiper-wrapper-mobile swiper-wrapper">
-      <div class="swiper-slide-mobile swiper-slide">
-        <img class="pack-medium" src="assets/images/clothes/solomat-test/waitingData.jpeg" />
-      </div>
-      <div class="swiper-slide-mobile swiper-slide">
-        <img class="pack-light" src="assets/images/clothes/2.jpg" />
-      </div>
-      <div class="swiper-slide-mobile swiper-slide">
-        <img class="pack-warm" src="assets/images/clothes/1.jpg" />
-      </div>
-    </div>
-    
-  </div>
-
- <button class="button b-1">depends on temperature</button>
+          <div class="container_addInfo__advice">
+            <div class="container_addInfo__advice_title">
+              Affirmation of the day
             </div>
-      
-        </div>
-        <button class="button b-test">swiper control</button>
-        <!--ADVICE and other info -->
-        <div class="container_addInfo__advice">
-          <div class="container_addInfo__advice_title">Цитата дня</div>
-          <div
-            class="container_addInfo__advice_content"
-            id="container_advice"
-          ></div>
-        </div>
-        <div class="block-3">
-          <div class="motivation">
-            <div class="gif">гифка дня</div>
+            <div
+              class="container_addInfo__advice_content"
+              id="container_advice"
+            ></div>
           </div>
-          <div class="quote">цитата дня</div>
+          <div class="block-3">
+            <div class="motivation">
+              <div class="gif">гифка дня</div>
+            </div>
+            <div class="quote">цитата дня</div>
+          </div>
         </div>
- <!--/div  for .block2-3 (below) -->
       </div>
-        <!--/div  for .container (below) -->
-      </div>
-
-      <!--End of vite app container-->
     </div>
 
     <script src="node_modules/jquery/dist/jquery.js"></script>
@@ -192,7 +142,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./assets/scripts/clothes/clothes.js"></script>
     <script src="./assets/scripts/clothes/swiper.js"></script>
-    <script type="module" src="./assets/scripts/tests/swiper-mobile.js"></script>
-    <script src="./assets/scripts/clothes/swiper-control.js"></script>
   </body>
 </html>
