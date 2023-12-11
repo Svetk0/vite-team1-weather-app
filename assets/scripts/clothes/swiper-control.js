@@ -6,10 +6,10 @@ const mobileWidth = 770; //px
 
 
 function getScreenSize() {
-    const windowInnerWidth = window.innerWidth;
-    const windowInnerHeight = window.innerHeight;
+    const windowInnerWidth = document.body.clientWidth;
+    //const windowInnerHeight = document.body.clientHeight;
     console.log('screen width: ' + windowInnerWidth);
-    console.log('screen height: ' + windowInnerHeight);
+    //console.log('screen height: ' + windowInnerHeight);
 
     if (windowInnerWidth > mobileWidth) {
         console.log('desktop version, no wrap');
