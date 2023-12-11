@@ -1,15 +1,17 @@
 .block-clothes {
-    
+
     display: flex;
     flex: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
+
 .block-clothes-header {
     display: block;
-    
+
 }
+
 .clothes-header-title {
     color: #fff;
     text-shadow: 1px 1px 2px rgb(60, 59, 59);
@@ -21,12 +23,19 @@
     display: flex;
 }
 
-.imHot, 
+@media screen and (max-width: 428px) {
+    .block-clothes--button-box {
+        flex-direction: column;
+    }
+}
+
+.imHot,
 .imIce {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+
     img {
         width: 30px;
     }
@@ -35,17 +44,18 @@
 .imIce:hover {
     box-shadow: 0 0 10px 0 #344b7e inset, 0 0 10px 4px #344b7e;
     background-color: rgba(216, 207, 207, 0.672);
-    color:#0f3035;
+    color: #0f3035;
     font-weight: 16px;
     border: none;
 
 }
+
 .imHot:hover {
-  box-shadow: 0 0 10px 0 #c41e1e inset, 0 0 10px 4px #c41e1e;
-  background-color: rgba(216, 207, 207, 0.672);
-  color:#b31313;
-  font-weight: 16px;
-  border: none;
+    box-shadow: 0 0 10px 0 #c41e1e inset, 0 0 10px 4px #c41e1e;
+    background-color: rgba(216, 207, 207, 0.672);
+    color: #b31313;
+    font-weight: 16px;
+    border: none;
 }
 
 
