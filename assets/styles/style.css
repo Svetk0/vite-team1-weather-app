@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
+/*------- colors  ------*/
+/* ---- mixins -----*/
+/*----- typo mixins -----*/
+/*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -78,6 +81,12 @@ a, button {
   margin: 0 auto;
   justify-content: space-between;
   gap: clamp(20px, 0.1rem + 5vw, 150px);
+}
+
+.sw-1 {
+  /* margin-top: 5px; */
+  display: block;
+  width: 80%;
 }
 
 .block-weather {
@@ -438,7 +447,7 @@ a, button {
   /*display:*/
   margin-top: 5px;
   display: block;
-  width: 100%;
+  width: 80%;
 }
 
 .mySwiper {
