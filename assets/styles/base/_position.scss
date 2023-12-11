@@ -28,11 +28,10 @@
   margin-right: 10px;
 }
 
-
-
-
-
-.motivation {
+.block-3 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
+
