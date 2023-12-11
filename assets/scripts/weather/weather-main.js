@@ -4,6 +4,7 @@ import * as locationModule from './locationModule.js';
 import * as advice from './advice.js';
 import * as backgroundModule from './backgroundModule.js';
 import * as fetchDataModule from './fetchDataModule.js';
+import {loadGif} from "../gifs/gifs.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -28,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const newData = await fetchDataModule.fetchData(null, city);
 
             displayWeatherData(newData);
+
+            loadGif()
         } catch (error) {
             console.error('Ошибка при получении данных о погоде:', error);
         }
@@ -66,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Инициализация приложения при загрузке страницы
 
     initWeatherApp();
-    advice.fetchAdvice();
+    // advice.fetchAdvice();
 
 
     // Функция инициализации приложения

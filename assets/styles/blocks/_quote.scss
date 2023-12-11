@@ -1,0 +1,17 @@
+.container_block-3__quote {
+  display: flex;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  background-color: rgba(216, 207, 207, 0.672);
+  color: #fff;
+  border-radius: 1.25rem;
+  width: 21.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .block-3 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

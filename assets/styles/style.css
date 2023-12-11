@@ -97,9 +97,12 @@ a, button {
   margin-right: 10px;
 }
 
-.motivation {
+.block-3 {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 /*                                     */
@@ -552,36 +555,7 @@ a, button {
   border-radius: 20px;
 }
 
-/* контейнер советов*/
-.container_addInfo__advice {
-  display: flex;
-  flex-direction: column;
-  padding: 0.8rem;
-  margin-top: 3rem;
-  background-color: rgba(216, 207, 207, 0.672);
-  color: #405fc3;
-  border-radius: 20px;
-  width: 70%;
-  align-self: center;
-  justify-self: center;
-}
-
-/*контейнер советов название*/
-.container_addInfo__advice_title {
-  display: flex;
-  justify-self: flex-start;
-  font-size: clamp(14px, 0.1rem + 2.5vw, 18px);
-  font-weight: 700;
-  text-align: center;
-}
-
-/*контейнер советов контент*/
-.container_addInfo__advice_content {
-  font-style: italic;
-  font-size: clamp(12px, 0.1rem + 2.5vw, 16px);
-  margin-top: 5px;
-}
-
+/*@import 'blocks/advice';*/
 .button {
   width: 163px;
   height: 47px;
@@ -606,6 +580,37 @@ a, button {
   justify-self: center;
 }
 
+.b-1 {
+  background-color: rgba(235, 243, 80, 0.4);
+}
+
+.container_block-3__gif {
+  display: flex;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  align-items: center;
+  width: 21.875rem;
+  height: 18.75rem;
+  border-radius: 1.25rem;
+}
+
+.container_block-3__quote {
+  display: flex;
+  padding: 0.8rem;
+  margin-top: 3rem;
+  background-color: rgba(216, 207, 207, 0.672);
+  color: #fff;
+  border-radius: 1.25rem;
+  width: 21.875rem;
+}
+
+@media screen and (max-width: 768px) {
+  .block-3 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 /*                                     */
 /* ------- THE TEST ZONE ---- */
 /*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */
