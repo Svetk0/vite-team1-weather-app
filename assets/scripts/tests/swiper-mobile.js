@@ -1,4 +1,5 @@
 //import * as fetchDataModule from '../weather/fetchDataModule.js';
+import * as constants from '../weather/constants.js';
 
 
 // Бесконечный куб
@@ -40,7 +41,7 @@ var swiper = new Swiper(".mySwiper-mobile", {
     loop: true,
 });
 
-
+//Change pack clothes
 
 const packMedium = document.querySelector('.pack-medium');
 const packLight = document.querySelector('.pack-light');
@@ -69,34 +70,71 @@ function determineSeason(currentTemperature) {
     return season;
 }
 
-function readDOMtemperature() { 
-    let currentTempStr = document.querySelector('#temperature').textContent;
-    let currentTempStrEdit = currentTempStr.substring(0, currentTempStr.length - 2);
-    let currentTemp = Number(currentTempStrEdit);
-    return currentTemp
-}
+async function readDOMtemperature() {
+    try {
+        let weatherMainInfoCheck = document.querySelector('.container_weather__main-info');
+        console.log('display weather: '+getComputedStyle(weatherMainInfoCheck).display );
 
-function changePackDependsOnTemperature() {
-    let domTemp = readDOMtemperature();
-    let season = determineSeason(domTemp);
-    switch (season) {
-        case 'winter':
-            console.log('winter pack');
-            changePack(pathWinter);
-            break;
-        case 'demi':
-            console.log('demi pack');
-            changePack(pathDemi);
-            break;
-        case 'summer':
-            console.log('summer pack');
-            changePack(pathSummer);
-            break;
+        if (weatherMainInfoCheck.style.display != 'none') {
+            let currentTempStr = await document.querySelector('#temperature').textContent;
+            let currentTempStrEdit = currentTempStr.substring(0, currentTempStr.length - 2);
+            let currentTemp = Number(currentTempStrEdit);
+            console.log('currentTemp from DOM: ' + currentTemp);
+            return currentTemp;
+            
+        } else if (weatherMainInfoCheck.style.display === 'none') {
+            console.log('weather display none');
+        }
+
+
+    } catch (error) {
+        console.error('Ошибка при получении температуры DOM элемента:', error);
+        throw error;
     }
-
-
-
-
 }
+
+async function changePackDependsOnTemperature() {
+    try {
+        let domTemp = await readDOMtemperature();
+        let season = determineSeason(domTemp);
+        switch (season) {
+            case 'winter':
+                console.log('winter pack');
+                changePack(pathWinter);
+                break;
+            case 'demi':
+                console.log('demi pack');
+                changePack(pathDemi);
+                break;
+            case 'summer':
+                console.log('summer pack');
+                changePack(pathSummer);
+                break;
+        }
+    }
+    catch (error) {
+        console.error('что то не так по данным получения температуры:', error);
+    }
+}
+// window.onload = function () { 
+//     changePackDependsOnTemperature();
+
+// constants.cityInput.addEventListener('keydown', function (event) {
+//     if (event.key === 'Enter') {
+//         changePackDependsOnTemperature();
+//     }
+// });
+// }
+
+//function work() { /*...*/ }
+
+// if (document.readyState == 'loading') {
+//   // ещё загружается, ждём события
+//   document.addEventListener('DOMContentLoaded', changePackDependsOnTemperature);
+// } else {
+//   // DOM готов!
+//   changePackDependsOnTemperature();
+// }
+
 
 document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
