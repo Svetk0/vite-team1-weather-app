@@ -26,6 +26,7 @@ function getScreenSize() {
 
 
 }
+document.querySelector('.b-test').style.display = 'none';
 getScreenSize();
 
 document.querySelector('.b-test').addEventListener('click', getScreenSize);
