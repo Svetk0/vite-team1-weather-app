@@ -71,8 +71,13 @@
        margin-bottom: 20px;
     }
     .mySwiper-mobile {
-         width: 300px;
-         height: 360px;
+        display: flex;
+        flex:100%;
+         max-width: 250px;
+         max-height: 360px;
+        
+        min-width: 170px;
+        min-height: 170px;
         
     }
     .swiper-wrapper-mobile {
@@ -82,16 +87,18 @@
         
     }
     .swiper-slide-mobile{
+        display: flex;
         background-color: transparent;
         border-radius: 20px;
         border: 2px solid #fff;
        
        justify-content: flex-start;
        align-items: center;
+       padding: 0;
        
     }
     .swiper-slide-mobile>img {
-        display: flex;
+        //display: flex;
         width: 100%;
         height: 100%;
         object-fit: cover;
