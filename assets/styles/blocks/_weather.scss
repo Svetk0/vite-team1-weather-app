@@ -2,10 +2,10 @@ $block-radius: 20px;
 $block-weather-width: 95%;
 $block-background-color: rgba(255, 255, 255, 0.581);
 $block-background-color-main: rgba(33, 31, 31, 0.4);
-$block-title-fsize:clamp(16px, 0.2rem + 2.5vw, 24px);
-$block-body-fsize:clamp(14px, 0.2rem + 2.5vw, 20px);
-$addInfo-body-fsize:clamp(12px, 0.1rem + 2.5vw, 16px);
-$addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
+$block-title-fsize: clamp(16px, 0.2rem + 2.5vw, 24px);
+$block-body-fsize: clamp(14px, 0.2rem + 2.5vw, 20px);
+$addInfo-body-fsize: clamp(12px, 0.1rem + 2.5vw, 16px);
+$addInfo-title-fsize: clamp(14px, 0.1rem + 2.5vw, 18px);
 
 
 .container_weather__input {
@@ -13,6 +13,8 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     justify-content: center;
     width: 100%;
 }
+
+
 
 /*инпут введения города*/
 #city {
@@ -32,6 +34,12 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     border: none;
 }
 
+@media screen and (max-width: 428px) {
+    #city {
+        padding-left: 5px;
+    }
+}
+
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
     display: flex;
@@ -41,7 +49,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     padding: clamp(0.7rem, 0.2rem + 2.5vw, 1rem);
     margin-top: 0.5rem;
     margin-bottom: 0.8rem;
-    background-color:$block-background-color-main;
+    background-color: $block-background-color-main;
     color: #fff;
     border-radius: $block-radius;
     width: 100%;
@@ -88,7 +96,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     gap: clamp(1rem, 0.5rem + 2.5vw, 3rem);
     font-size: $block-body-fsize;
     text-align: center;
-    
+
 }
 
 /*контейнер дополнительной информации*/
@@ -99,20 +107,26 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     width: 100%;
     justify-content: space-between;
     gap: 10px;
-    max-height: 35vh;
-   
-    
+
+
 }
+
+@media screen and (max-width: 428px) {
+    .container_weather__add-info {
+        flex-direction: column;
+    }
+}
+
 
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    
+
     background-color: rgba(33, 31, 31, 0.4);
     color: white;
-    
+
     border-radius: $block-radius;
     flex: 55%;
 }
@@ -121,7 +135,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 #temperature_feels_like {
     color: white;
     align-self: center;
-    
+
     font-size: clamp(2rem, 0.5rem + 2.5vw, 3.5rem);
     margin-top: 2rem;
 
@@ -131,23 +145,24 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 .container_weather__add-info__compass {
     display: flex;
     align-items: center;
-    justify-content: center;
+
     flex-direction: column;
     padding: 0.3rem;
     background-color: $block-background-color-main;
     color: white;
     border-radius: $block-radius;
     flex: 45%;
-    
+
 }
 
 /*компас название контейнера*/
-.container__add-info__feels_like_title,.container_weather__add-info__compass_title {
+.container__add-info__feels_like_title,
+.container_weather__add-info__compass_title {
     font-size: $block-body-fsize;
     color: white;
-    
+
     align-self: flex-start;
-    margin: 0.5rem ;
+    margin: 0.5rem;
 }
 
 /* компоненты компаса */
@@ -161,8 +176,8 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     color: white;
     background-color: rgba(255, 255, 255, 0.1);
     margin: 0.5rem;
-    
-    
+
+
 }
 
 /* стрелка компаса */
@@ -273,8 +288,7 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
 }
 
 /*контейнер ошибок */
-#error-container
- {
+#error-container {
     display: grid;
     grid-template-rows: 12fr;
     padding: 1rem;
@@ -282,6 +296,5 @@ $addInfo-title-fsize:clamp(14px, 0.1rem + 2.5vw, 18px);
     background-color: rgba(143, 92, 92, 0.438);
     color: rgb(238, 230, 219);
     border-radius: $block-radius;
-    font-size:$block-body-fsize;
+    font-size: $block-body-fsize;
 }
-
