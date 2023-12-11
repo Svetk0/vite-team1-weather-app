@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Инициализация приложения при загрузке страницы
 
     initWeatherApp();
-    advice.fetchAdvice();
+    // advice.fetchAdvice();
 
 
     // Функция инициализации приложения
