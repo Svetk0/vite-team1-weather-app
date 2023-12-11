@@ -22,7 +22,8 @@ html {
   min-height: 100vh;
 }
 
-a, button {
+a,
+button {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -195,9 +196,13 @@ a, button {
   width: 100%;
   justify-content: space-between;
   gap: 10px;
-  max-height: 35vh;
 }
 
+@media screen and (max-width: 428px) {
+  .container_weather__add-info {
+    flex-direction: column;
+  }
+}
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
   display: flex;
@@ -231,7 +236,8 @@ a, button {
 }
 
 /*компас название контейнера*/
-.container__add-info__feels_like_title, .container_weather__add-info__compass_title {
+.container__add-info__feels_like_title,
+.container_weather__add-info__compass_title {
   font-size: clamp(14px, 0.2rem + 2.5vw, 20px);
   color: white;
   align-self: flex-start;
@@ -393,6 +399,11 @@ a, button {
   display: flex;
 }
 
+@media screen and (max-width: 428px) {
+  .block-clothes--button-box {
+    flex-direction: column;
+  }
+}
 .imHot,
 .imIce {
   cursor: pointer;
