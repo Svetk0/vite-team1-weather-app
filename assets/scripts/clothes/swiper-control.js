@@ -13,7 +13,7 @@ function getScreenSize() {
 
     if (windowInnerWidth > mobileWidth) {
         console.log('desktop version, no wrap');
-        swiperDeskButtons.style.display = 'block';
+        swiperDeskButtons.style.display = 'flex';
         swiperDesktop.style.display = 'block';
         swiperMobile.style.display = 'none';
     }
