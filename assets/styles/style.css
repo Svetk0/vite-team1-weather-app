@@ -83,12 +83,6 @@ a, button {
   gap: clamp(20px, 0.1rem + 5vw, 150px);
 }
 
-.sw-1 {
-  /* margin-top: 5px; */
-  display: block;
-  width: 80%;
-}
-
 .block-weather {
   display: flex;
   flex-direction: column;
@@ -457,8 +451,8 @@ a, button {
 
 .swiper {
   height: 100%;
-  margin-top: 30px;
   background-color: rgba(216, 207, 207, 0.672);
+  border-radius: 20px;
 }
 
 .swiper-slide {
@@ -565,14 +559,13 @@ a, button {
 }
 
 .button {
-  width: 130px;
-  height: 40px;
+  width: 163px;
+  height: 47px;
   margin: 5px;
   border-radius: 20px;
   border: 1px solid #fff;
   background-color: rgba(133, 127, 127, 0.4);
   color: #fff;
-  padding: 3px;
 }
 
 .imIce {
