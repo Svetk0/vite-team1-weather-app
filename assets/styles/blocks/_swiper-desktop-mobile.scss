@@ -14,7 +14,7 @@
 .swiper {
    
     height: 100%;
-    background-color: rgba(216, 207, 207, 0.672);
+    background-color: rgba(33, 31, 31, 0.4);
     border-radius: 20px;
   }
   .swiper-slide {
@@ -50,6 +50,7 @@
     border-radius: 0px;
     width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,30px));
     opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
+    //background: #b30707;
     
   }
   

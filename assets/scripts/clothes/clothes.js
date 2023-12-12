@@ -55,7 +55,7 @@ function getImageArray(type, currentTempa) {
   ];
   const imageForColdFrom0To15 = [
     "./assets/images/clothes/pics-slider-desctop/0-15/forCold/1.png",
-    "./assets/images/clothes/pics-slider-desctop/0-15/forCold/2.png",
+    "./assets/images/clothes/pics-slider-desctop/0-15/forCold/2.jpg",
     "./assets/images/clothes/pics-slider-desctop/0-15/forCold/3.png",
     "./assets/images/clothes/pics-slider-desctop/0-15/forCold/4.png",
   ];
@@ -69,32 +69,37 @@ function getImageArray(type, currentTempa) {
   const imageForColdMore16 = [
     "./assets/images/clothes/pics-slider-desctop/more+15/forCold/1.png",
     "./assets/images/clothes/pics-slider-desctop/more+15/forCold/2.png",
+    "./assets/images/clothes/pics-slider-desctop/more+15/forCold/3.png",
     "./assets/images/clothes/pics-slider-desctop/more+15/forCold/4.png",
-    "./assets/images/clothes/pics-slider-desctop/more+15/forCold/5.png",
   ];
 
   const imageForHotFromMinus1tillMinus15 = [
-    "./assets/images/clothes/pics-slider-desctop/-14-0/1.jpg",
-    "./assets/images/clothes/pics-slider-desctop/-14-0/2.jpg",
-    "./assets/images/clothes/pics-slider-desctop/-14-0/3.jpg",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forHot/1.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forHot/2.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forHot/3.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forHot/4.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forHot/5.png",
   ];
 
   const imageForColdFromMinus1tillMinus15 = [
-    "./assets/images/clothes/pics-slider-desctop/-14-0/1.jpg",
-    "./assets/images/clothes/pics-slider-desctop/-14-0/2.jpg",
-    "./assets/images/clothes/pics-slider-desctop/-14-0/3.jpg",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forCold/1.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forCold/2.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forCold/3.png",
+    "./assets/images/clothes/pics-slider-desctop/-14-0/forCold/4.png",
   ];
 
   const imageForHotFromMinus16 = [
-    "./assets/images/clothes/pics-slider-desctop/less-15/1.jpg",
-    "./assets/images/clothes/pics-slider-desctop/less-15/2.jpg",
-    "./assets/images/clothes/pics-slider-desctop/less-15/3.jpg",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forHot/1.png",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forHot/2.jpg",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forHot/3.png",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forHot/4.png",
   ];
 
   const imageForColdFromMinus16 = [
-    "./assets/images/clothes/pics-slider-desctop/less-15/1.jpg",
-    "./assets/images/clothes/pics-slider-desctop/less-15/2.jpg",
-    "./assets/images/clothes/pics-slider-desctop/less-15/3.jpg",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forCold/1.jpg",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forCold/2.png",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forCold/3.jpg",
+    "./assets/images/clothes/pics-slider-desctop/less-15/forCold/4.png",
   ];
 
   if (type === "hot") {

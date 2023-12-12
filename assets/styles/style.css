@@ -1,5 +1,9 @@
 @charset "UTF-8";
-/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
+
+/*------- colors  ------*/
+/* ---- mixins -----*/
+/*----- typo mixins -----*/
+/*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -17,9 +21,11 @@ html {
   color: black;
   background-color: black;
   min-height: 100vh;
+  font-family: Lucida Sans Unicode;
 }
 
-a, button {
+a,
+button {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -70,6 +76,7 @@ a, button {
     font-size: 0.83vw;
   }
 }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -101,7 +108,7 @@ a, button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
 }
 
@@ -126,6 +133,7 @@ a, button {
   border-radius: 10px;
   border: none;
   padding-left: 25px;
+  font-family: Lucida Sans Unicode;
 }
 
 #city:focus {
@@ -137,6 +145,7 @@ a, button {
     padding-left: 5px;
   }
 }
+
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
   display: flex;
@@ -208,6 +217,7 @@ a, button {
     flex-direction: column;
   }
 }
+
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
   display: flex;
@@ -251,8 +261,8 @@ a, button {
 /* компоненты компаса */
 .container_weather__add-info__compass_content {
   position: relative;
-  width: clamp(100px, 10rem + 10vw, 150px);
-  height: clamp(100px, 10rem + 10vw, 150px);
+  width: clamp(100px, 10rem + 10vw, 200px);
+  height: clamp(100px, 10rem + 10vw, 200px);
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid white;
@@ -361,11 +371,13 @@ a, button {
 /*буква W запад*/
 .divider__text-west {
   left: -1.5em;
+  top: -0.3em;
 }
 
 /*буква E восток*/
 .divider__text-east {
   right: -0.1em;
+  top: -0.3em;
 }
 
 /*контейнер ошибок */
@@ -394,7 +406,7 @@ a, button {
 
 .clothes-header-title {
   color: #fff;
-  text-shadow: 1px 1px 2px rgb(60, 59, 59);
+  text-shadow: 2px 2px 2px rgb(80, 80, 80);
   font-size: clamp(16px, 0.2rem + 2.5vw, 24px);
   text-align: center;
 }
@@ -408,13 +420,16 @@ a, button {
     flex-direction: column;
   }
 }
+
 .imHot,
 .imIce {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
 }
+
 .imHot img,
 .imIce img {
   width: 30px;
@@ -466,7 +481,7 @@ a, button {
 
 .swiper {
   height: 100%;
-  background-color: rgba(216, 207, 207, 0.672);
+  background-color: rgba(33, 31, 31, 0.4);
   border-radius: 20px;
 }
 
@@ -486,7 +501,7 @@ a, button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 35px;
   transition: transform 0.3s ease-in-out;
 }
@@ -547,17 +562,17 @@ a, button {
   padding: 0;
 }
 
-.swiper-slide-mobile > img {
+.swiper-slide-mobile>img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 
 /*@import 'blocks/advice';*/
 .button {
-  width: 163px;
+  width: 180px;
   height: 47px;
   margin: 5px;
   border-radius: 20px;
@@ -586,7 +601,7 @@ a, button {
 
 .container_block-3__gif {
   display: flex;
-  padding: 0.8rem;
+  margin: 0.8rem;
   margin-top: 3rem;
   align-items: center;
   width: 21.875rem;
@@ -598,7 +613,7 @@ a, button {
   display: flex;
   padding: 0.8rem;
   margin-top: 3rem;
-  background-color: rgba(216, 207, 207, 0.672);
+  background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 1.25rem;
   width: 21.875rem;
@@ -611,6 +626,8 @@ a, button {
     align-items: center;
   }
 }
+
 /*                                     */
 /* ------- THE TEST ZONE ---- */
-/*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */
+/*  @import 'blocks/swiper-mobile';                                   */
+/*# sourceMappingURL=style.css.map */
