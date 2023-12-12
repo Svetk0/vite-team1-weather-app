@@ -80,7 +80,7 @@ export async function updateBackgroundBasedOnWeather(newData) {
                     backgroundImage = 'assets/images/weather/mist/mist_night_ai.jfif';
                     break;
                 case 'снег':
-                    backgroundImage = 'assets/images/weather/snow/snow_forrest_night.jfif';
+                    backgroundImage = 'assets/images/weather/snow/snow_forrest_night.jpg';
                     break;
                 case 'небольшой снег':
                     backgroundImage = 'assets/images/weather/snow/frozen.jpg';
@@ -122,7 +122,7 @@ export async function updateBackgroundBasedOnWeather(newData) {
                     backgroundImage = 'assets/images/weather/mist/big_mist_forrest_day.jfif';
                     break;
                 case 'снег':
-                    backgroundImage = 'assets/images/weather/snow/snow_forrest.jpg';
+                    backgroundImage = 'assets/images/weather/snow/snow_forrest_night.jfif';
                     break;
                 case 'небольшой снег':
                     backgroundImage = 'assets/images/weather/snow/frozen.jpg';

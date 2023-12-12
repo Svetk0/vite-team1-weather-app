@@ -1,0 +1,33 @@
+/* контейнер советов*/
+
+.container_addInfo__advice {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    margin-top: 3rem;
+    background-color: rgba(216, 207, 207, 0.672);
+    color:  #405fc3;
+    border-radius: $block-radius;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+/*контейнер советов название*/
+.container_addInfo__advice_title {
+    display: flex;
+    justify-self: flex-start;
+    font-size: $addInfo-title-fsize;
+    font-weight: 700;
+    text-align: center;
+    
+
+}
+
+/*контейнер советов контент*/
+.container_addInfo__advice_content {
+    font-style: italic;
+    font-size:$addInfo-body-fsize;
+    margin-top: 5px;
+}
