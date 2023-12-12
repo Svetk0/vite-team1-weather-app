@@ -256,8 +256,8 @@ a, button {
 /* компоненты компаса */
 .container_weather__add-info__compass_content {
   position: relative;
-  width: clamp(100px, 10rem + 10vw, 150px);
-  height: clamp(100px, 10rem + 10vw, 150px);
+  width: clamp(100px, 10rem + 10vw, 200px);
+  height: clamp(100px, 10rem + 10vw, 200px);
   border-radius: 50%;
   overflow: hidden;
   border: 1px solid white;
