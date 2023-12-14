@@ -1,7 +1,7 @@
 const swiperDesktop = document.querySelector('.sw-1');
 const swiperDeskButtons = document.querySelector('.block-clothes--button-box');
 const swiperMobile = document.querySelector('.sw-2');
-const mobileWidth = 770; //px
+const mobileWidth = 770; //px, на этой границе идет прееключение слайдеров
 
 
 
@@ -27,24 +27,10 @@ function getScreenSize() {
 
 }
 document.querySelector('.b-test').style.display = 'none';
-getScreenSize();
-
 document.querySelector('.b-test').addEventListener('click', getScreenSize);
 
+getScreenSize();
 
 
-// var detectWrap = function (className) {
-//     var wrappedItems = [];
-//     var prevItem = {};
-//     var currItem = {};
-//     var items = document.getElementsByClassName(className);
-//     for (var i = 0; i < items.length; i++) {
-//         curritem = items[i].getBoundingClientRect();
 
-//         if (prevItem && prevItem.top < currItem.top) {
-//             wrappedItems.push(items[i]);
-//         }
-//     };
-//     prevItem = curritem;
-//     return wrappedItems;
-// }
+

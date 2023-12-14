@@ -1,9 +1,5 @@
 @charset "UTF-8";
-
-/*------- colors  ------*/
-/* ---- mixins -----*/
-/*----- typo mixins -----*/
-/*--------- base -------*/
+/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -21,11 +17,10 @@ html {
   color: black;
   background-color: black;
   min-height: 100vh;
-  font-family: Lucida Sans Unicode;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-a,
-button {
+a, button {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -76,7 +71,6 @@ button {
     font-size: 0.83vw;
   }
 }
-
 .container {
   display: flex;
   flex-direction: row;
@@ -145,7 +139,6 @@ button {
     padding-left: 5px;
   }
 }
-
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
   display: flex;
@@ -217,7 +210,6 @@ button {
     flex-direction: column;
   }
 }
-
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
   display: flex;
@@ -377,7 +369,7 @@ button {
 /*буква E восток*/
 .divider__text-east {
   right: -0.1em;
-  top: -0.3em;
+  bottom: 1em;
 }
 
 /*контейнер ошибок */
@@ -420,7 +412,6 @@ button {
     flex-direction: column;
   }
 }
-
 .imHot,
 .imIce {
   cursor: pointer;
@@ -429,7 +420,6 @@ button {
   justify-content: center;
   font-size: 16px;
 }
-
 .imHot img,
 .imIce img {
   width: 30px;
@@ -501,7 +491,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 35px;
   transition: transform 0.3s ease-in-out;
 }
@@ -562,11 +552,11 @@ button {
   padding: 0;
 }
 
-.swiper-slide-mobile>img {
+.swiper-slide-mobile > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
 }
 
@@ -626,8 +616,6 @@ button {
     align-items: center;
   }
 }
-
 /*                                     */
 /* ------- THE TEST ZONE ---- */
-/*  @import 'blocks/swiper-mobile';                                   */
-/*# sourceMappingURL=style.css.map */
+/*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */
