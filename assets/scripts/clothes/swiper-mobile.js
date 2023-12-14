@@ -1,31 +1,37 @@
- 
+ //=====    Стиль мобильного свайпера
 
-//Карточки
+ //Карточки
 var swiper = new Swiper(".mySwiper-mobile", {
     effect: "cards",
     grabCursor: true,
     loop: true,
 });
 
-//Change pack clothes
+//=======   Функционал мобильного свайпера
 
-const packMedium = document.querySelector('.pack-medium');
+//Change pack clothes
+//const packMedium = document.querySelector('.pack-medium');
 const packLight = document.querySelector('.pack-light');
 const packWarm = document.querySelector('.pack-warm');
 
+//Прописываем путь к папка с одеждой
 const clothesImages = ['2.jpg', '3.jpg'];
 const pathDemi = 'assets/images/clothes/solomat-test/0-15/';
 const pathWinter = 'assets/images/clothes/solomat-test/minus15-0/';
 const pathSummer = 'assets/images/clothes/solomat-test/15-25/';
 
+
+// Функция выбора папки с одеждой
 function changePack(pathSeason) {
     packLight.src = pathSeason + clothesImages[0];
-    console.log(packLight);
+    packWarm.src = pathSeason + clothesImages[1];
+
     // packMedium.src = pathSeason + clothesImages[0];
     //console.log(packMedium);
-    packWarm.src = pathSeason + clothesImages[1];
-    console.log(packWarm);
+    
 }
+
+// Функция определения сезона в зависимости от температуры
 function determineSeason(currentTemperature) {
 
     let season = '';
@@ -36,6 +42,7 @@ function determineSeason(currentTemperature) {
     return season;
 }
 
+// Функция считывания температуры из DOM дерева
 async function readDOMtemperature() {
     try {
         let weatherMainInfoCheck = document.querySelector('.container_weather__main-info');
@@ -59,6 +66,7 @@ async function readDOMtemperature() {
     }
 }
 
+// Функция выбора одежды в зависимости от сезона
 async function changePackDependsOnTemperature() {
     try {
         let domTemp = await readDOMtemperature();
@@ -82,25 +90,7 @@ async function changePackDependsOnTemperature() {
         console.error('что то не так по данным получения температуры:', error);
     }
 }
-// window.onload = function () { 
-//     changePackDependsOnTemperature();
 
-// constants.cityInput.addEventListener('keydown', function (event) {
-//     if (event.key === 'Enter') {
-//         changePackDependsOnTemperature();
-//     }
-// });
-// }
-
-//function work() { /*...*/ }
-
-// if (document.readyState == 'loading') {
-//   // ещё загружается, ждём события
-//   document.addEventListener('DOMContentLoaded', changePackDependsOnTemperature);
-// } else {
-//   // DOM готов!
-//   changePackDependsOnTemperature();
-// }
 
 
 document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
