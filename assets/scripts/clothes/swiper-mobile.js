@@ -19,7 +19,6 @@ function getRandomInt() {
     return Math.floor(Math.random() * (maxInt - minInt) + minInt);
 }
 
-//console.log('random: ' + getRandomInt());
 //Change pack clothes
 //const packMedium = document.querySelector('.pack-medium');
 const packLight = document.querySelector('.pack-light');
@@ -27,7 +26,7 @@ const packWarm = document.querySelector('.pack-warm');
 
 //Прописываем путь к папка с одеждой
 const clothesImages = [getRandomInt() + '.png', getRandomInt() + '.png'];
-//console.log(clothesImages);
+
 const pathDemi = 'assets/images/clothes/pics-slider-desctop/0-15/';
 const pathWinter = 'assets/images/clothes/pics-slider-desctop/-14-0/';
 const pathSummer = 'assets/images/clothes/pics-slider-desctop/more+15';
@@ -40,7 +39,7 @@ function changePack(pathSeason) {
     packWarm.src = pathSeason +'forCold/'+ clothesImages[1];
 
     // packMedium.src = pathSeason + clothesImages[0];
-    console.log(packWarm);
+    //console.log(packWarm);
 
 }
 
@@ -104,4 +103,3 @@ export async function changePackDependsOnTemperature(gotTemp) {
 
 
 
-// document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
