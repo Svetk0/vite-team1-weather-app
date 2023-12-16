@@ -1,6 +1,7 @@
- //=====    Стиль мобильного свайпера
+import * as constants from '../weather/constants.js';
+//=====    Стиль мобильного свайпера
 
- //Карточки
+//Карточки
 var swiper = new Swiper(".mySwiper-mobile", {
     effect: "cards",
     grabCursor: true,
@@ -8,6 +9,8 @@ var swiper = new Swiper(".mySwiper-mobile", {
 });
 
 //=======   Функционал мобильного свайпера
+
+
 
 //Change pack clothes
 //const packMedium = document.querySelector('.pack-medium');
@@ -28,64 +31,57 @@ function changePack(pathSeason) {
 
     // packMedium.src = pathSeason + clothesImages[0];
     //console.log(packMedium);
-    
+
 }
 
 // Функция определения сезона в зависимости от температуры
 function determineSeason(currentTemperature) {
+    currentTemperature = Math.round(currentTemperature);
 
     let season = '';
     if (currentTemperature < 0) season = 'winter';
     if (currentTemperature > -1 && currentTemperature < 15) season = 'demi';
     if (currentTemperature > 14) season = 'summer';
-    //console.log('Season: ' + season);
+    console.log('Season: ' + season + ';  --temp rounded: '+currentTemperature);
     return season;
 }
 
-// Функция считывания температуры из DOM дерева
-async function readDOMtemperature() {
-    try {
-        let weatherMainInfoCheck = document.querySelector('.container_weather__main-info');
-        console.log('display weather: '+getComputedStyle(weatherMainInfoCheck).display );
+// Функция считывания температуры из Local Storage
+async function readLocalStorageTemperature() {
+    let mainTemperature = +localStorage.getItem('test-temp');
 
-        if (weatherMainInfoCheck.style.display != 'none') {
-            let currentTempStr = await document.querySelector('#temperature').textContent;
-            let currentTempStrEdit = currentTempStr.substring(0, currentTempStr.length - 2);
-            let currentTemp = Number(currentTempStrEdit);
-            console.log('currentTemp from DOM: ' + currentTemp);
-            return currentTemp;
-            
-        } else if (weatherMainInfoCheck.style.display === 'none') {
-            console.log('weather display none');
-        }
-
-
-    } catch (error) {
-        console.error('Ошибка при получении температуры DOM элемента:', error);
-        throw error;
-    }
+    //console.log('mainTemperature local:' + mainTemperature + ' ---' + typeof (mainTemperature));
+    return Math.round(mainTemperature);
 }
 
+
 // Функция выбора одежды в зависимости от сезона
-async function changePackDependsOnTemperature() {
+export async function changePackDependsOnTemperature(gotTemp) {
     try {
-        let domTemp = await readDOMtemperature();
-        let season = determineSeason(domTemp);
+       
+        let gotTempLS = await readLocalStorageTemperature();
+        
+
+        console.log('==  Swiper-mobile: new data === ' + gotTemp + '--- ' + typeof (gotTemp) + '.-- and from LS:  ' + gotTempLS);
+        let season = determineSeason(gotTemp);
         switch (season) {
             case 'winter':
-                console.log('winter pack');
+                console.log('winter pack: -15 and below');
                 changePack(pathWinter);
                 break;
             case 'demi':
-                console.log('demi pack');
+                console.log('demi pack: 0 .. +15');
                 changePack(pathDemi);
                 break;
             case 'summer':
-                console.log('summer pack');
+                console.log('summer pack: +15 and upper');
                 changePack(pathSummer);
                 break;
         }
+
     }
+   
+
     catch (error) {
         console.error('что то не так по данным получения температуры:', error);
     }
@@ -93,4 +89,4 @@ async function changePackDependsOnTemperature() {
 
 
 
-document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);
+// document.querySelector('.b-1').addEventListener('click', changePackDependsOnTemperature);

@@ -33,6 +33,8 @@ export async function fetchData(location) {
     }
     console.log(data);
     console.log("Получены данные о погоде:", data.main.temp);
+    //localStorage.setItem('test-temp', data.main.temp);
+    //localStorage.setItem('test', 1);
 
     return data;
   } catch (error) {
