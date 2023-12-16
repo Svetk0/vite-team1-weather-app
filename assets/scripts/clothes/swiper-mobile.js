@@ -61,12 +61,12 @@ export async function changePackDependsOnTemperature(gotTemp) {
        
         let gotTempLS = await readLocalStorageTemperature();
         
-
-        console.log('==  Swiper-mobile: new data === ' + gotTemp + '--- ' + typeof (gotTemp) + '.-- and from LS:  ' + gotTempLS);
+        console.log('=====  Swiper-mobile module: =====');
+        console.log('new data: feels like === ' + gotTemp + '--- ' + typeof (gotTemp) + '.-- and from LS:  ' + gotTempLS);
         let season = determineSeason(gotTemp);
         switch (season) {
             case 'winter':
-                console.log('winter pack: -15 and below');
+                console.log('winter pack: -1 and below');
                 changePack(pathWinter);
                 break;
             case 'demi':
@@ -78,7 +78,7 @@ export async function changePackDependsOnTemperature(gotTemp) {
                 changePack(pathSummer);
                 break;
         }
-
+        console.log('-----  Swiper-mobile module END -----');
     }
    
 

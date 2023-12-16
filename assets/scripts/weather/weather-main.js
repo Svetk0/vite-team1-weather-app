@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Используем полученные данные о городе для мобильного свайпера
             localStorage.setItem('test-temp', newData.main.temp);
             localStorage.setItem('test', 2);
-            changePackDependsOnTemperature(newData.main.temp);
+            changePackDependsOnTemperature(newData.main.feels_like);
             //console.log('==  check weather main ==='+newData.main.temp + '--- '+typeof(newData.main.temp)+ '.--  from LS:  '+ localStorage.getItem('test-temp'));
 
             
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             displayWeatherData(newData);
             localStorage.setItem('test-temp', newData.main.temp);
             localStorage.setItem('test', 3);
-            changePackDependsOnTemperature(newData.main.temp);
+            changePackDependsOnTemperature(newData.main.feels_like);
             
         } catch (error) {
             console.error('Ошибка инициализации приложения о погоде:', error);
