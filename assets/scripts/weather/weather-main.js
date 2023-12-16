@@ -4,8 +4,8 @@ import * as locationModule from './locationModule.js';
 import * as advice from './advice.js';
 import * as backgroundModule from './backgroundModule.js';
 import * as fetchDataModule from './fetchDataModule.js';
-import {loadGif} from "../gifs/gifs.js";
-
+import { loadGif } from "../gifs/gifs.js";
+import { changePackDependsOnTemperature } from "../clothes/swiper-mobile.js";
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -29,8 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
             const newData = await fetchDataModule.fetchData(null, city);
 
             displayWeatherData(newData);
+            loadGif();
 
-            loadGif()
+            // Используем полученные данные о городе для мобильного свайпера
+            localStorage.setItem('test-temp', newData.main.temp);
+            localStorage.setItem('test', 2);
+            changePackDependsOnTemperature(newData.main.feels_like);
+            //console.log('==  check weather main ==='+newData.main.temp + '--- '+typeof(newData.main.temp)+ '.--  from LS:  '+ localStorage.getItem('test-temp'));
+
+            
         } catch (error) {
             console.error('Ошибка при получении данных о погоде:', error);
         }
@@ -79,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const newData = await fetchDataModule.fetchData(location);
             backgroundModule.updateBackgroundBasedOnWeather(newData);
             displayWeatherData(newData);
+            localStorage.setItem('test-temp', newData.main.temp);
+            localStorage.setItem('test', 3);
+            changePackDependsOnTemperature(newData.main.feels_like);
+            
         } catch (error) {
             console.error('Ошибка инициализации приложения о погоде:', error);
         }
