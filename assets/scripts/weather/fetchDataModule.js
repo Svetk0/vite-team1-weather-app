@@ -1,8 +1,11 @@
 // fetchDataModule.js
 import * as constants from "./constants.js";
 import * as ErrorsModule from "./errorsModule.js";
+import { getScreenSize } from "../clothes/swiper-control.js";
 
 export async function fetchData(location) {
+  //console.log('===  Size screen from FETCH MODULE ====');
+  getScreenSize();
   try {
     let API_URL;
 

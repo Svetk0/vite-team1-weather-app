@@ -1,4 +1,4 @@
-import * as constants from '../weather/constants.js';
+
 //=====    Стиль мобильного свайпера
 
 //Карточки
@@ -8,10 +8,8 @@ var swiper = new Swiper(".mySwiper-mobile", {
     loop: true,
 });
 
+
 //=======   Функционал мобильного свайпера
-
-
-
 //Change pack clothes
 //const packMedium = document.querySelector('.pack-medium');
 const packLight = document.querySelector('.pack-light');
