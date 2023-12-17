@@ -6,6 +6,8 @@ var swiper = new Swiper(".mySwiper-mobile", {
     effect: "cards",
     grabCursor: true,
     loop: true,
+    slideClass: 'swiper-slide-mobile',
+    wrapperClass:'swiper-wrapper-mobile',
 });
 
 
