@@ -1,9 +1,9 @@
 #quote {
   display: flex;
-  //width: 45%;
+  width: 450px;
   align-items:center;
   justify-content: center;
-  flex: 35%;
+  flex: 50%;
   
 }
 .container_block-3__quote {
@@ -14,6 +14,7 @@
   color: #fff;
   border-radius: 1.25rem;
   flex: 450px;
+  overflow: hidden;
   //width: 21.875rem;
   //width: 100%;
   //max-width: 100%;

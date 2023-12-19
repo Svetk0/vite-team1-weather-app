@@ -608,9 +608,10 @@ a, button {
 
 #quote {
   display: flex;
+  width: 450px;
   align-items: center;
   justify-content: center;
-  flex: 35%;
+  flex: 50%;
 }
 
 .container_block-3__quote {
@@ -621,6 +622,7 @@ a, button {
   color: #fff;
   border-radius: 1.25rem;
   flex: 450px;
+  overflow: hidden;
 }
 
 /*                                     */
