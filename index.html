@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!--
+    <link rel="stylesheet" href="assets/styles/base/style-swapper.css" />
+    -->
+
+    <title>Vite App: Not only weather</title>
+    <script type="module" crossorigin src="/assets/index-esGOrYSU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-g9f7XD_m.css">
+  </head>
+
+  <body>
+    <div id="app">
+
+      <div class="container">
+        <div class="block-weather">
+          <div class="container_weather__input">
+            <input
+              type="text"
+              id="city"
+              placeholder="Введите название города"
+            />
+          </div>
+          <div class="container_weather__main-info">
+            <h1 class="container__main-info__location" id="location"></h1>
+            <div
+              class="container__main-info__temperature"
+              id="temperature"
+            ></div>
+            <img
+              class="container__main-info__img"
+              src="''"
+              id="icon"
+              alt="bg-ph"
+            />
+
+            <div
+              class="container__main-info__description"
+              id="description"
+            ></div>
+            <div class="container_weather__main-info_min-max">
+              <div
+                class="container__main-info_min-max__min"
+                id="temperature_min"
+              ></div>
+              <div
+                class="container__main-info_min-max__max"
+                id="temperature_max"
+              ></div>
+            </div>
+          </div>
+          <div class="container_weather__add-info">
+            <div class="container_weather__add-info__feels_like">
+              <div class="container__add-info__feels_like_title">
+                Ощущается как
+              </div>
+              <div
+                class="container__add-info__feels_like_temperature"
+                id="temperature_feels_like"
+              ></div>
+            </div>
+            <div class="container_weather__add-info__compass">
+              <div class="container_weather__add-info__compass_title">
+                Ветер
+              </div>
+              <div class="container_weather__add-info__compass_content">
+                <div
+                  class="container_weather__add-info__compass_content_arrow"
+                  id="arrow"
+                ></div>
+                <div
+                  class="container_weather__add-info__compass_content_arrow_wind-speed"
+                  id="wind-speed"
+                ></div>
+                <div class="divider divider-north">
+                  <span class="divider__text divider__text-north">N</span>
+                </div>
+                <div class="divider divider-south">
+                  <span class="divider__text divider__text-south">S</span>
+                </div>
+                <div class="divider divider-east">
+                  <span class="divider__text divider__text-east">E</span>
+                </div>
+                <div class="divider divider-west">
+                  <span class="divider__text divider__text-west">W</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container__error-container" id="error-container"></div>
+        </div>
+        <!--  ============ end weather block      ==============-->
+
+        <!--  ============ START CLOTHES block      ==============-->
+        <div class="block-2-3">
+          <div class="block-clothes">
+            <div class="block-clothes-header">
+              <h2 class="clothes-header-title">Что по одежде?</h2>
+
+              <div class="block-clothes--button-box">
+                <button class="button imIce">
+                  Я мерзляк
+                  <span>
+                    <img
+                      src="data:image/png;base64,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"
+                      alt="cold emodzi"
+                  /></span>
+                </button>
+                <button class="button imHot">
+                  Я горячая штучка
+                  <span>
+                    <img
+                      src="data:image/png;base64,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"
+                      alt="hot emodzi"
+                  /></span>
+                </button>
+              </div>
+              <div class="clothes-error"></div>
+            </div>
+
+            <!--  .sw-1 for turn on/off swiper -->
+            <div class="sw-1">
+              <div class="swiper mySwiper sw-1">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solomat Swiper Mobile  -->
+          <div class="test-swiper-mobile">
+            <div class="sw-2">
+            
+  <div class="swiper-mobile mySwiper-mobile">
+    <div class="swiper-wrapper-mobile">
+     
+      <div class="swiper-slide-mobile">
+        <img alt="clothes-pack" class="pack-light" src="/assets/hot-rabbit-qk3kZkuu.jpg" />
+      </div>
+      <div class="swiper-slide-mobile">
+        <img alt="clothes-pack" class="pack-warm" src="/assets/cold-bear-NJj5Uch5.jpg" />
+      </div>
+    </div>
+
+  </div>
+<!--
+ <button class="button b-1">Гид по одежде</button>
+            </div>
+            -->
+
+        </div>
+
+       
+     
+        <div class="block-3">
+          <div id="quote"></div>
+          <div id="gif"></div>
+        </div>
+ <!--/div  for .block2-3 (below) -->
+      </div>
+        <!--/div  for .container (below) -->
+      </div>
+
+      <!--End of vite app container-->
+    </div>
+
+    <!--=========  SCRIPTS ======-->
+   <!-- <script src="node_modules/jquery/dist/jquery.js"></script> 
+    <script type="module" src="main.js"></script> 
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/scripts/clothes/swiper.js"></script>
+   
+   
+    <script src="./assets/scripts/quote/quote.js"></script>
+  </body>
+</html>
