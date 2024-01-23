@@ -1,112 +1,126 @@
  /*-----   Swiper-desktop -----*/
-.sw-1 {
-    /*display:*/
-    margin-top: 5px;
-    
-  display:block;
-  width: 80%;
-    }
-    .mySwiper {
-        width: 100%;
-        height: 250px;
-    }
-    
-.swiper {
+ .sw-1 {
+   /*display:*/
+   margin-top: 5px;
+
+   display: block;
+   width: 80%;
+ }
+
+ .mySwiper {
+   width: 100%;
+   height: 250px;
+ }
+
+ .swiper {
+
+   height: 100%;
+   background-color: rgba(33, 31, 31, 0.4);
+   border-radius: 20px;
+ }
+
+ .swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: transparent;
+   padding: 20px 15px 20px;
+ }
+
+ .swiper-slide>img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 35px;
+   transition: transform 0.3s ease-in-out;
+ }
+
+ .swiper-slide:hover img {
+   transform: scale(1.03);
+ }
+
+
+ .swiper-pagination {
+   margin-bottom: 20px;
+ }
+
+ .swiper-pagination-bullet {
+   --swiper-theme-color: hsl(340, 90%, 44%);
+   border-radius: 0px;
+   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 30px));
+   opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
+   //background: #b30707;
+
+ }
+
+
+ .swiper-pagination-bullet-active {
+   opacity: var(--swiper-pagination-bullet-opacity, 5);
+ }
+
+
+
+ /*-----   Swiper-mobile -----*/
+ .sw-2 {
+   display: flex;
+   //max-width: 800px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .swiper-mobile {
+   margin-bottom: 20px;
+ }
+
+ .mySwiper-mobile {
+   display: flex;
+   flex: 100%;
+   max-width: 260px;
    
-    height: 100%;
-    background-color: rgba(33, 31, 31, 0.4);
-    border-radius: 20px;
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    padding: 20px 15px 20px;
-  }
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 35px;
-    transition: transform 0.3s ease-in-out;
-  }
+   //  max-height: 360px;
 
-  .swiper-slide:hover img {
-    transform: scale(1.03);
-  }
+    //min-width: 170px;
+   // min-height: 170px;
+   justify-content: flex-start;
+   align-items: center;
+   margin: 20px 0px;
 
+ }
 
-  .swiper-pagination{
-    margin-bottom: 20px;
-  }
+ .swiper-wrapper-mobile {
+   display: flex;
+   position: relative;
+   //margin-bottom: 120%;
+   justify-content: flex-start;
+   align-items: center;
+
+ }
+
+ .swiper-slide-mobile {
+   display: flex;
+   background-color: transparent;
+   border-radius: 20px;
+   border: 2px solid #fff;
+   //width: 16rem;
+
   
-  .swiper-pagination-bullet {
-    --swiper-theme-color: hsl(340, 90%, 44%);
-    border-radius: 0px;
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,30px));
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, .3);
-    //background: #b30707;
-    
-  }
-  
-  
-  .swiper-pagination-bullet-active {
-    opacity: var(--swiper-pagination-bullet-opacity, 5);
-  }
-  
-
-
-    /*-----   Swiper-mobile -----*/
-    .sw-2 {
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .swiper-mobile {
-       margin-bottom: 20px;
-    }
-    .mySwiper-mobile {
-        display: flex;
-        flex:100%;
-         max-width: 250px;
-         max-height: 360px;
-        
-        min-width: 170px;
-        min-height: 170px;
-        
-    }
-    .swiper-wrapper-mobile {
-        display: flex;
-        position: absolute;
-        margin-bottom: 120%;
-        
-    }
-    .swiper-slide-mobile{
-        display: flex;
-        background-color: transparent;
-        border-radius: 20px;
-        border: 2px solid #fff;
-       
-       justify-content: flex-start;
-       align-items: center;
-       padding: 0;
-       
-    }
-    .swiper-slide-mobile>img {
-        //display: flex;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-        
-      }
-    
-   
+   padding: 0;
    
 
+ }
+
+ .swiper-slide-mobile>img {
+   //display: flex;
+   //width: 100%;
+   //height: 100%;
+   object-fit: cover;
+   border-radius: 19px;
+   //width: 16rem;
+   width: clamp(100px, 260px, 500px);
+
+ }

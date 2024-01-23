@@ -1,9 +1,5 @@
 @charset "UTF-8";
-
-/*------- colors  ------*/
-/* ---- mixins -----*/
-/*----- typo mixins -----*/
-/*--------- base -------*/
+/*------- colors  ------*/ /* ---- mixins -----*/ /*----- typo mixins -----*/ /*--------- base -------*/
 * {
   box-sizing: border-box;
 }
@@ -21,11 +17,10 @@ html {
   color: black;
   background-color: black;
   min-height: 100vh;
-  font-family: Lucida Sans Unicode;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-a,
-button {
+a, button {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -76,7 +71,6 @@ button {
     font-size: 0.83vw;
   }
 }
-
 .container {
   display: flex;
   flex-direction: row;
@@ -90,7 +84,7 @@ button {
 .block-weather {
   display: flex;
   flex-direction: column;
-  flex: 30%;
+  flex: 35%;
   justify-content: flex-start;
   align-items: center;
   padding: 5px 10px;
@@ -109,7 +103,10 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  -moz-column-gap: clamp(10px, 0.1rem + 15vw, 50px);
+       column-gap: clamp(10px, 0.1rem + 15vw, 50px);
+  padding: 5px 10px;
 }
 
 /*                                     */
@@ -145,7 +142,6 @@ button {
     padding-left: 5px;
   }
 }
-
 /*контейнер с основной инфой: город, температура, мин и макс температура*/
 .container_weather__main-info {
   display: flex;
@@ -217,7 +213,6 @@ button {
     flex-direction: column;
   }
 }
-
 /*контейнер доп информации ощущается как*/
 .container_weather__add-info__feels_like {
   display: flex;
@@ -377,7 +372,7 @@ button {
 /*буква E восток*/
 .divider__text-east {
   right: -0.1em;
-  top: -0.3em;
+  bottom: 1em;
 }
 
 /*контейнер ошибок */
@@ -420,7 +415,6 @@ button {
     flex-direction: column;
   }
 }
-
 .imHot,
 .imIce {
   cursor: pointer;
@@ -429,7 +423,6 @@ button {
   justify-content: center;
   font-size: 16px;
 }
-
 .imHot img,
 .imIce img {
   width: 30px;
@@ -496,12 +489,12 @@ button {
   padding: 20px 15px 20px;
 }
 
-.swiper-slide img {
+.swiper-slide > img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 35px;
   transition: transform 0.3s ease-in-out;
 }
@@ -540,16 +533,17 @@ button {
 .mySwiper-mobile {
   display: flex;
   flex: 100%;
-  max-width: 250px;
-  max-height: 360px;
-  min-width: 170px;
-  min-height: 170px;
+  max-width: 260px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0px;
 }
 
 .swiper-wrapper-mobile {
   display: flex;
-  position: absolute;
-  margin-bottom: 120%;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .swiper-slide-mobile {
@@ -557,17 +551,14 @@ button {
   background-color: transparent;
   border-radius: 20px;
   border: 2px solid #fff;
-  justify-content: flex-start;
-  align-items: center;
   padding: 0;
 }
 
-.swiper-slide-mobile>img {
-  width: 100%;
-  height: 100%;
+.swiper-slide-mobile > img {
   -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 20px;
+     object-fit: cover;
+  border-radius: 19px;
+  width: 260px;
 }
 
 /*@import 'blocks/advice';*/
@@ -599,35 +590,41 @@ button {
   background-color: rgba(235, 243, 80, 0.4);
 }
 
+#gif {
+  display: flex;
+  flex: 45%;
+  align-items: center;
+  justify-content: center;
+}
+
 .container_block-3__gif {
   display: flex;
   margin: 0.8rem;
-  margin-top: 3rem;
   align-items: center;
-  width: 21.875rem;
-  height: 18.75rem;
-  border-radius: 1.25rem;
+  border-radius: 20px;
+  max-height: 230px;
+  width: clamp(8rem, 0.3rem + 15vw, 230px);
+}
+
+#quote {
+  display: flex;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  flex: 50%;
 }
 
 .container_block-3__quote {
   display: flex;
   padding: 0.8rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 1.25rem;
-  width: 21.875rem;
-}
-
-@media screen and (max-width: 768px) {
-  .block-3 {
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+  flex: 450px;
+  overflow: hidden;
 }
 
 /*                                     */
 /* ------- THE TEST ZONE ---- */
-/*  @import 'blocks/swiper-mobile';                                   */
-/*# sourceMappingURL=style.css.map */
+/*  @import 'blocks/swiper-mobile';                                   *//*# sourceMappingURL=style.css.map */

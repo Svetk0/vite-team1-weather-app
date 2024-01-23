@@ -1,17 +1,31 @@
+#quote {
+  display: flex;
+  width: 450px;
+  align-items:center;
+  justify-content: center;
+  flex: 50%;
+  
+}
 .container_block-3__quote {
   display: flex;
   padding: 0.8rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   background-color: rgba(33, 31, 31, 0.4);
   color: #fff;
   border-radius: 1.25rem;
-  width: 21.875rem;
+  flex: 450px;
+  overflow: hidden;
+  //width: 21.875rem;
+  //width: 100%;
+  //max-width: 100%;
+  //max-height: 200px;
+  //flex: 45%;
 }
 
-@media screen and (max-width: 768px) {
-  .block-3 {
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .block-3 {
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     align-items: center;
+//   }
+// }

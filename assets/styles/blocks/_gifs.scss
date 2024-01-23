@@ -1,9 +1,21 @@
+#gif {
+  display: flex;
+  //width: 45%;
+   flex: 45%;
+  align-items: center;
+  justify-content: center;
+}
 .container_block-3__gif {
   display: flex;
   margin: 0.8rem;
-  margin-top: 3rem;
+  //margin-top: 2rem;
   align-items: center;
-  width: 21.875rem;
-  height: 18.75rem;
-  border-radius: 1.25rem;
+
+  //width:100%;
+  // height: 18.75rem;
+  border-radius: 20px;
+  //max-width: 230px;
+  max-height: 230px;
+  width: clamp(8rem, 0.3rem + 15vw, 230px);
+  
 }

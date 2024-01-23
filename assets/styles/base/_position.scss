@@ -6,13 +6,14 @@
   margin: 0 auto;
   justify-content: space-between;
   gap: clamp(20px, 0.1rem + 5vw, 150px);
+
   
 }
 
 .block-weather {
   display: flex;
   flex-direction: column;
-  flex: 30%;
+  flex: 35%;
   justify-content: flex-start;
   align-items: center;
   padding: 5px 10px;
@@ -33,6 +34,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  //flex: 50%;
+  column-gap: clamp(10px, 0.1rem + 15vw, 50px);
+  padding: 5px 10px;
+
 }
 
